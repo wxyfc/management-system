@@ -1,0 +1,156 @@
+[{
+    "path": "/home",
+    "name": "home",
+    "component": "welcome/Home",
+    "meta": {
+        "intercept": true,
+        "role": [1]
+    }
+}, {
+    "path": "/logo",
+    "name": "logo",
+    "redirect": {
+        "name": "home"
+    },
+    "meta": {
+        "intercept": true,
+        "role": [1]
+    }
+}, {
+    "path": "/cooplogo",
+    "name": "cooplogo",
+    "redirect": {
+        "name": "home"
+    },
+    "meta": {
+        "intercept": true,
+        "role": [1]
+    }
+}, {
+    "path": "/hide",
+    "name": "hide",
+    "component": "welcome/Main",
+    "meta": {
+        "intercept": false,
+        "noQuickTabs": true,
+        "noKeepAlive": true,
+        "role": [1]
+    },
+    "children": [{
+        "path": "/systemLog",
+        "name": "systemLog",
+        "component": "welcome/SystemLog",
+        "meta": {
+            "icon": "el-icon-house",
+            "intercept": false,
+            "noQuickTabs": false,
+            "noKeepAlive": true,
+            "role": [1]
+        }
+    }, {
+        "path": "/quickFeedback",
+        "name": "quickFeedback",
+        "component": "welcome/QuickFeedback",
+        "meta": {
+            "icon": "el-icon-house",
+            "intercept": false,
+            "noQuickTabs": false,
+            "noKeepAlive": true,
+            "role": [1]
+        }
+    }]
+}, {
+    "path": "/home",
+    "name": "home",
+    "component": "welcome/Main",
+    "meta": {
+        "icon": "el-icon-house",
+        "intercept": true,
+        "noKeepAlive": true,
+        "noQuickTabs": true,
+        "role": [1]
+    },
+    "children": [{
+        "path": "/home",
+        "name": "home",
+        "redirect": {
+            "name": "home"
+        },
+        "meta": {
+            "icon": "el-icon-house",
+            "intercept": true,
+            "noKeepAlive": true,
+            "role": [1]
+        }
+    }, {
+        "path": "/test",
+        "name": "test",
+        "component": "test/Test",
+        "meta": {
+            "icon": "el-icon-sugar",
+            "intercept": true,
+            "noKeepAlive": true,
+            "role": [1]
+        },
+        "children": [{
+            "path": "/test",
+            "name": "test",
+            "component": "test/Test",
+            "meta": {
+                "icon": "el-icon-sugar",
+                "intercept": true,
+                "noKeepAlive": true,
+                "role": [1]
+            }
+        }, {
+            "path": "/home",
+            "name": "home",
+            "redirect": {
+                "name": "home"
+            },
+            "meta": {
+                "icon": "el-icon-house",
+                "intercept": true,
+                "noKeepAlive": true,
+                "role": [1]
+            }
+        }]
+    }]
+}, {
+    "path": "/systemManagement",
+    "name": "systemManagement",
+    "component": "welcome/Main",
+    "meta": {
+        "icon": "el-icon-sugar",
+        "intercept": true,
+        "role": [1]
+    },
+    "children": [{
+        "path": "/menuManagement",
+        "name": "menuManagement",
+        "component": "admin/routemanagement/RouteManagement",
+        "meta": {
+            "icon": "el-icon-sugar",
+            "intercept": true,
+            "role": [1]
+        }
+    }, {
+        "path": "/accountManagement",
+        "name": "accountManagement",
+        "component": "admin/accountmanagement/AccountManagement",
+        "meta": {
+            "icon": "el-icon-sugar",
+            "intercept": true,
+            "role": [1]
+        }
+    }, {
+        "path": "/roleManagement",
+        "name": "roleManagement",
+        "component": "admin/rolemanagement/RoleManagement",
+        "meta": {
+            "icon": "el-icon-sugar",
+            "intercept": true,
+            "role": [1]
+        }
+    }]
+}]

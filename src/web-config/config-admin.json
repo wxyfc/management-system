@@ -1,6 +1,7 @@
 ﻿{
     "bgImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575016631730&di=af4ad0a2df9eec815034153e061e7813&imgtype=0&src=http%3A%2F%2Fwww.bbra.cn%2FUploadfiles%2Fimgs%2F2015%2F11%2F18%2Fjian2%2F001.jpg",
     "helloTitle": "adminTitle",
+    "icon": "https://cloud.tencent.com/favicon.ico",
     "themeBackgroundColor": "#304156",
     "themeTextColor": "#BFCBD9",
     "menuCollapse": false,

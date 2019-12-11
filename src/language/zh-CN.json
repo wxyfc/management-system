@@ -1,4 +1,10 @@
 {
+    "": "",
+    "requestResult": "请求结果",
+    "requestParamPrev": "请求参数预览",
+    "modify": "修改",
+    "sureAdd": "确定添加",
+    "sureRequest": "确定请求",
     "adminTitle": "管理系统",
     "subject": "蜂电科技",
     "presetTheme": "预置主题",
@@ -417,5 +423,5 @@
     "rent": "房租",
     "property": "物业",
     "orgRechargeRecord": "充值记录",
-    "": ""
+    "requestAddress": "请求地址"
 }

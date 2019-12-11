@@ -30,6 +30,26 @@ export function getQueryObject(url) {
     return obj;
 }
 
+export function getParams(url) {
+    //url 拼接参数转json
+    url = url == null ? window.location.href : url;
+    try {
+        let index = url.indexOf('?');
+        url = url.match(/\?([^#]+)/)[1];
+        let obj = {}, arr = url.split('&');
+        for (let i = 0; i < arr.length; i++) {
+            let subArr = arr[i].split('=');
+            let key = decodeURIComponent(subArr[0]);
+            let value = decodeURIComponent(subArr[1]);
+            obj[key] = value;
+        }
+        return obj;
+
+    } catch (err) {
+        return null;
+    }
+}
+
 export function cellDataFormat(r, c) {
     //新表格格式方法
     let ipf = c.property.indexOf("/");
@@ -77,26 +97,6 @@ export function cellDataFormat(r, c) {
 //     };
 //   }
 // },
-
-export function getParams(url) {
-    //url 拼接参数转json
-    url = url == null ? window.location.href : url;
-    try {
-        let index = url.indexOf('?');
-        url = url.match(/\?([^#]+)/)[1];
-        let obj = {}, arr = url.split('&');
-        for (let i = 0; i < arr.length; i++) {
-            let subArr = arr[i].split('=');
-            let key = decodeURIComponent(subArr[0]);
-            let value = decodeURIComponent(subArr[1]);
-            obj[key] = value;
-        }
-        return obj;
-
-    } catch (err) {
-        return null;
-    }
-}
 
 export function formData(item) {
     //转换成表单

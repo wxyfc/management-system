@@ -102,8 +102,12 @@
     white-space: nowrap;
 }
 
-.form50z80 {
+.width80 {
     width: 80%
+}
+
+.width50 {
+    width: 50%
 }
 
 .title {

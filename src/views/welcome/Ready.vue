@@ -70,7 +70,7 @@ export default {
           : pathMatch.substr(1, pathMatch.length);
       that.$router.replace({ name });
       this.$setTitle(this.language[this.otherInfo.helloTitle]);
-      this.$setIco("https://cloud.tencent.com/favicon.ico");
+      this.$setIco(this.otherInfo.icon);
       // clearTimeout(t);
       // }, 2000);
     }

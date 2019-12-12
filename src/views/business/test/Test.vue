@@ -1,33 +1,33 @@
 <template>
-  <el-row>
-    <mt>{{language[$options.name]}}</mt>
-    <div class="margin1vw" style="height:80%;">
-      <RequestUtil></RequestUtil>
-      <mdb @click="exc">excelTest</mdb>
-    </div>
-  </el-row>
+    <el-row>
+        <mt>{{language[$options.name]}}</mt>
+        <div class="margin1vw" style="height:80%;">
+            <RequestUtil></RequestUtil>
+            <mdb @click="exc">excelTest</mdb>
+        </div>
+    </el-row>
 </template>
 
 <script>
-export default {
-  mixins: [require("@/mymixins").default],
-  name: "test",
-  components: {
-    RequestUtil: () => import("@/assets/RequestUtil")
-  },
-  data() {
-    return {};
-  },
-  methods: {
-    exc() {
-      require("@/excelformat/test.js").default("封装测试", [
-        { title: "测试一", content: "内容一" },
-        { title: "测试二", content: "内容二" }
-      ]);
-    },
-    test() {
-      // window.location = encodeURI(this.location);
-    }
-  }
-};
+    export default {
+        mixins: [require("@/mymixins").default],
+        name: "test",
+        components: {
+            RequestUtil: () => import("@/assets/RequestUtil")
+        },
+        data() {
+            return {};
+        },
+        methods: {
+            exc() {
+                require("@/excelformat/test.js").default("封装测试", [
+                    {title: "测试一", content: "内容一"},
+                    {title: "测试二", content: "内容二"}
+                ]);
+            },
+            test() {
+                // window.location = encodeURI(this.location);
+            }
+        }
+    };
 </script>

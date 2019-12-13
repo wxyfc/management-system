@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d225df0"],{e5f0:function(e,n,a){"use strict";a.r(n),a.d(n,"default",function(){return r});var i=a("c0d6");function r(){var e=i["a"].getters.getLanguage,n=[{width:"220",prop:"username",align:"right",label:e.userName,fixed:!0},{width:"220",prop:"email",align:"right",label:e.email,fixed:!0}];return n}}}]);

@@ -2,6 +2,7 @@
 const Mock = require ( 'mockjs' );
 const h = `http://localhost:5233`
 const role = { admin : 5233 , tourist : 5232 , users : 5231 , other : 5230 }
+const success = { code : 200 , message : "成功" }
 const home = function ( r ) {
     let b = JSON.parse ( r.body );
     let u = b.username;
@@ -16,7 +17,7 @@ const home = function ( r ) {
     }
     let res = {
         data : { username : Mock.mock ( `@name` ) , userrole , userid , token : Mock.mock ( `@String(30)` ) } ,
-        code : 0 , message : "登录成功"
+        ...success
     }
     return res;
 }

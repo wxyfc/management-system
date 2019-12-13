@@ -101,7 +101,7 @@ let m = {
             //message
             //notify
             if ( !this.$isTrue ( i ) ) {
-                i = 0;
+                i = 200;
             }
             let ml = [ "info" , "success" , "warning" , "error" ]
             this.$message ( {
@@ -113,8 +113,8 @@ let m = {
             } );
         } ,
         ifServerCode ( i ) {
-            let s = [ 0 , 200 ];//成功
-            let w = [ 1 , 101 , 100 , 1002 , 20102 , 20101 ];//警告
+            let s = [ 200 ];//成功
+            let w = [ 101 , 100 , 1002 , 20102 , 20101 ];//警告
             let e = [ 10101 , 10211 , 10212 , 10213 , 10214 , 10215 , 10216 ];//失败
             if ( s.includes ( i ) ) {
                 return 1;

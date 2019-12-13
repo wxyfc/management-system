@@ -7,170 +7,244 @@
       "intercept" : true ,
       "role" : [ 5233 , 5232 , 5231 , 5230 ]
     }
+  } , {
+  "path" : "/logo" ,
+  "name" : "logo" ,
+  "redirect" : {
+    "name" : "home"
   } ,
-  {
-    "path" : "/logo" ,
-    "name" : "logo" ,
-    "redirect" : {
-      "name" : "home"
-    } ,
-    "meta" : {
-      "intercept" : true ,
-      "role" : [ 5233 , 5232 , 5231 , 5230 ]
-    }
-  } ,
-  {
-    "path" : "/cooplogo" ,
-    "name" : "cooplogo" ,
-    "redirect" : {
-      "name" : "home"
-    } ,
-    "meta" : {
-      "intercept" : true ,
-      "role" : [ 5233 , 5232 , 5231 , 5230 ]
-    }
-  } ,
-  {
-    "path" : "/hide" ,
-    "name" : "hide" ,
-    "component" : "welcome/Main" ,
-    "meta" : {
-      "intercept" : false ,
-      "noQuickTabs" : true ,
-      "noKeepAlive" : true ,
-      "role" : [ 5233 , 5232 , 5231 , 5230 ]
-    } ,
-    "children" : [
-      {
-        "path" : "/systemLog" ,
-        "name" : "systemLog" ,
-        "component" : "welcome/SystemLog" ,
-        "meta" : {
-          "icon" : "el-icon-house" ,
-          "intercept" : false ,
-          "noQuickTabs" : false ,
-          "noKeepAlive" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      } ,
-      {
-        "path" : "/quickFeedback" ,
-        "name" : "quickFeedback" ,
-        "component" : "welcome/QuickFeedback" ,
-        "meta" : {
-          "icon" : "el-icon-house" ,
-          "intercept" : false ,
-          "noQuickTabs" : false ,
-          "noKeepAlive" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      }
-    ]
-  } ,
-  {
-    "path" : "/home" ,
-    "name" : "home" ,
-    "component" : "welcome/Main" ,
-    "meta" : {
-      "icon" : "el-icon-house" ,
-      "intercept" : true ,
-      "noKeepAlive" : true ,
-      "noQuickTabs" : true ,
-      "role" : [ 5233 , 5232 , 5231 , 5230 ]
-    } ,
-    "children" : [
-      {
-        "path" : "/home" ,
-        "name" : "home" ,
-        "redirect" : {
-          "name" : "home"
-        } ,
-        "meta" : {
-          "icon" : "el-icon-house" ,
-          "intercept" : true ,
-          "noKeepAlive" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      } ,
-      {
-        "path" : "/test" ,
-        "name" : "test" ,
-        "component" : "test/Test" ,
-        "meta" : {
-          "icon" : "el-icon-sugar" ,
-          "intercept" : true ,
-          "noKeepAlive" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        } ,
-        "children" : [
-          {
-            "path" : "/test" ,
-            "name" : "test" ,
-            "component" : "test/Test" ,
-            "meta" : {
-              "icon" : "el-icon-sugar" ,
-              "intercept" : true ,
-              "noKeepAlive" : true ,
-              "role" : [ 5233 , 5232 , 5231 , 5230 ]
-            }
-          } ,
-          {
-            "path" : "/home" ,
-            "name" : "home" ,
-            "redirect" : {
-              "name" : "home"
-            } ,
-            "meta" : {
-              "icon" : "el-icon-house" ,
-              "intercept" : true ,
-              "noKeepAlive" : true ,
-              "role" : [ 5233 , 5232 , 5231 , 5230 ]
-            }
-          }
-        ]
-      }
-    ]
-  } ,
-  {
-    "path" : "/systemManagement" ,
-    "name" : "systemManagement" ,
-    "component" : "welcome/Main" ,
-    "meta" : {
-      "icon" : "el-icon-sugar" ,
-      "intercept" : true ,
-      "role" : [ 5233 , 5232 , 5231 , 5230 ]
-    } ,
-    "children" : [
-      {
-        "path" : "/menuManagement" ,
-        "name" : "menuManagement" ,
-        "component" : "admin/routemanagement/RouteManagement" ,
-        "meta" : {
-          "icon" : "el-icon-sugar" ,
-          "intercept" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      } ,
-      {
-        "path" : "/accountManagement" ,
-        "name" : "accountManagement" ,
-        "component" : "admin/accountmanagement/AccountManagement" ,
-        "meta" : {
-          "icon" : "el-icon-sugar" ,
-          "intercept" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      } ,
-      {
-        "path" : "/roleManagement" ,
-        "name" : "roleManagement" ,
-        "component" : "admin/rolemanagement/RoleManagement" ,
-        "meta" : {
-          "icon" : "el-icon-sugar" ,
-          "intercept" : true ,
-          "role" : [ 5233 , 5232 , 5231 , 5230 ]
-        }
-      }
-    ]
+  "meta" : {
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
   }
+} , {
+  "path" : "/cooplogo" ,
+  "name" : "cooplogo" ,
+  "redirect" : {
+    "name" : "home"
+  } ,
+  "meta" : {
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  }
+} , {
+  "path" : "/hide" ,
+  "name" : "hide" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "intercept" : false ,
+    "noQuickTabs" : true ,
+    "noKeepAlive" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/systemLog" ,
+      "name" : "systemLog" ,
+      "component" : "welcome/SystemLog" ,
+      "meta" : {
+        "icon" : "el-icon-house" ,
+        "intercept" : false ,
+        "noQuickTabs" : false ,
+        "noKeepAlive" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    } , {
+      "path" : "/quickFeedback" ,
+      "name" : "quickFeedback" ,
+      "component" : "welcome/QuickFeedback" ,
+      "meta" : {
+        "icon" : "el-icon-house" ,
+        "intercept" : false ,
+        "noQuickTabs" : false ,
+        "noKeepAlive" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/home" ,
+  "name" : "home" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-house" ,
+    "intercept" : true ,
+    "noKeepAlive" : true ,
+    "noQuickTabs" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/home" ,
+      "name" : "home" ,
+      "redirect" : {
+        "name" : "home"
+      } ,
+      "meta" : {
+        "icon" : "el-icon-house" ,
+        "intercept" : true ,
+        "noKeepAlive" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    } , {
+      "path" : "/test" ,
+      "name" : "test" ,
+      "component" : "test/Test" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "noKeepAlive" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      } ,
+      "children" : [
+        {
+          "path" : "/test" ,
+          "name" : "test" ,
+          "component" : "test/Test" ,
+          "meta" : {
+            "icon" : "el-icon-sugar" ,
+            "intercept" : true ,
+            "noKeepAlive" : true ,
+            "role" : [ 5233 , 5232 , 5231 , 5230 ]
+          }
+        } , {
+          "path" : "/home" ,
+          "name" : "home" ,
+          "redirect" : {
+            "name" : "home"
+          } ,
+          "meta" : {
+            "icon" : "el-icon-house" ,
+            "intercept" : true ,
+            "noKeepAlive" : true ,
+            "role" : [ 5233 , 5232 , 5231 , 5230 ]
+          }
+        }
+      ]
+    }
+  ]
+} , {
+  "path" : "/aboutIcon" ,
+  "name" : "aboutIcon" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/aboutIcon" ,
+      "name" : "aboutIcon" ,
+      "component" : "welcome/SystemLog" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/aboutButton" ,
+  "name" : "aboutButton" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/aboutButton" ,
+      "name" : "aboutButton" ,
+      "component" : "welcome/SystemLog" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/aboutDatePicker" ,
+  "name" : "aboutDatePicker" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/aboutDatePicker" ,
+      "name" : "aboutDatePicker" ,
+      "component" : "welcome/SystemLog" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/tableBasicUsage" ,
+  "name" : "tableBasicUsage" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/tableBasicUsage" ,
+      "name" : "tableBasicUsage" ,
+      "component" : "abouttable/tablebasicusage/TableBasicUsage" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/systemManagement" ,
+  "name" : "systemManagement" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/menuManagement" ,
+      "name" : "menuManagement" ,
+      "component" : "admin/routemanagement/RouteManagement" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    } , {
+      "path" : "/accountManagement" ,
+      "name" : "accountManagement" ,
+      "component" : "admin/accountmanagement/AccountManagement" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    } , {
+      "path" : "/roleManagement" ,
+      "name" : "roleManagement" ,
+      "component" : "admin/rolemanagement/RoleManagement" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+}
 ]

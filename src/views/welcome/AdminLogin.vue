@@ -82,7 +82,7 @@
                 return rules;
             } ,
             dialogWidth () {
-                return this.otherInfo.menuCollapse ? "50%" : "25%";
+                return this.otherInfo.menuCollapse ? "75%" : "25%";
             }
         } ,
         watch : {} ,
@@ -93,7 +93,7 @@
             } ,
             resizeHandler () {
                 let clientWidth = document.body.clientWidth;
-                if ( clientWidth <= 992 ) {
+                if ( clientWidth <= 963 ) {
                     this.setOtherInfo ( { menuCollapse : true } );
                 } else {
                     this.setOtherInfo ( { menuCollapse : false } );
@@ -119,7 +119,7 @@
                     username : this.ruleForm.username ,
                     password : this.ruleForm.password
                 } ).then ( res => {
-                    if ( res.code == 0 ) {
+                    if ( res.code == 200 ) {
                         let data = res.data;
                         that.setUserInfo ( {
                             userName : data.username ,

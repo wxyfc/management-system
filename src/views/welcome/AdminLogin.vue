@@ -132,7 +132,6 @@ export default {
           let data = res.Data;
           that.setUserInfo({
             userName: data.Username,
-            // headerTitle: data.Nickname,
             headerTitle: that.language.subject,
             userId: data.Id,
             userToken: data.Token,

@@ -16,10 +16,18 @@ module.exports = {
   transpileDependencies: [
   ],
   // compiler: false,
+  //不生成 .map文件
   productionSourceMap: false,
   chainWebpack: config => {
+    //修复热更新
     config.resolve.symlinks(true);
   },
+
+  /*
+  减小打包体积  自动引入cdn
+  键是引入代码里面定义的名字
+  值是插件源码暴露出来的名字
+  */
   configureWebpack: {
     externals: {
       'vue': 'Vue',

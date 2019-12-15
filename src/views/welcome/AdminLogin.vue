@@ -22,33 +22,18 @@
                     ref="ruleForm"
                     status-icon
                     :rules="rules"
-                    style="margin:0vw 3vh"
+                    class="alncnt"
                     @keyup.enter.native="submitForm('ruleForm')"
             >
                 <el-form-item prop="username">
-                    <el-input
-                            type="text"
-                            size="medium"
-                            v-model="ruleForm.username"
-                            :maxlength="18"
-                            prefix-icon="el-icon-user"
-                    ></el-input>
+                    <el-autocomplete class="width80" v-model="ruleForm.username" size="medium" :maxlength="18" prefix-icon="el-icon-user" :fetch-suggestions="querySearch"
+                                     @select="handleSelect"></el-autocomplete>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input
-                            type="password"
-                            size="medium"
-                            v-model="ruleForm.password"
-                            :maxlength="20"
-                            show-password
-                            prefix-icon="el-icon-tickets"
-                    ></el-input>
+                    <el-input class="width80" type="password" size="medium" v-model="ruleForm.password" :maxlength="20" show-password prefix-icon="el-icon-tickets"></el-input>
                 </el-form-item>
                 <el-form-item class="alncnt">
-                    <mdb size="medium" type="primary" @click="submitForm('ruleForm')" :long="true">
-                        {{language.signIn}}
-                        <!-- <span class="emphasize"></span> -->
-                    </mdb>
+                    <mdb size="medium" type="primary" @click="submitForm('ruleForm')" class="width80"> {{language.signIn}}</mdb>
                 </el-form-item>
             </el-form>
         </el-dialog>
@@ -66,7 +51,8 @@
                 ruleForm : {
                     username : null ,
                     password : null
-                }
+                } ,
+                historicalAccount : {}
             };
         } ,
         components : {
@@ -87,6 +73,28 @@
         } ,
         watch : {} ,
         methods : {
+            handleSelect ( item ) {
+                this.ruleForm = {
+                    username : item.value ,
+                    password : item.password
+                }
+            } ,
+            querySearch ( q , cb ) {
+                let that = this;
+                let options = [];
+                if ( !!q ) {
+                    for ( let k in that.historicalAccount ) {
+                        if ( k.includes ( q ) ) {
+                            options.push ( { password : this.$avoid ( that.historicalAccount[ k ] ) , value : k } );
+                        }
+                    }
+                } else {
+                    for ( let k in that.historicalAccount ) {
+                        options.push ( { password : this.$avoid ( that.historicalAccount[ k ] ) , value : k } );
+                    }
+                }
+                cb ( options );
+            } ,
             hiddRefresh () {
                 clearLocal ();
                 history.go ( 0 );
@@ -116,11 +124,12 @@
             login () {
                 let that = this;
                 this.post ( "/user/login" , {
-                    username : this.ruleForm.username ,
-                    password : this.ruleForm.password
+                    username : that.ruleForm.username ,
+                    password : that.ruleForm.password
                 } ).then ( res => {
                     if ( res.code == 200 ) {
                         let data = res.data;
+                        that.$set ( that.historicalAccount , that.ruleForm.username , that.ruleForm.password );
                         that.setUserInfo ( {
                             userName : data.username ,
                             // headerTitle: data.Nickname,
@@ -140,6 +149,7 @@
         mounted () {
             // let userMemory = getLocal("userMemory");
             this.ruleForm = getLocal ( "loginForm" );
+            this.historicalAccount = getLocal ( "historicalAccount" );
             // if (this.$isTrue(userMemory)) {
             if ( false ) {
                 this.setOtherInfo ( userMemory.otherInfo );
@@ -157,6 +167,7 @@
                 language : that.language
             } );
             setLocal ( "loginForm" , that.ruleForm );
+            setLocal ( "historicalAccount" , that.historicalAccount );
         }
     };
 </script>

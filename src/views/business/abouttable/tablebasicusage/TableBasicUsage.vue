@@ -53,7 +53,7 @@
             // test: {
             //   type: String,
             //   default: () => {
-            //     let colors = require("@/color.js");
+            //     let colors = require("@/web-config/color.js");
             //     return colors[Math.ceil(Math.random() * colors.length - 1)];
             //   }
             // }

@@ -124,8 +124,8 @@
     }
   ]
 } , {
-  "path" : "/aboutIcon" ,
-  "name" : "aboutIcon" ,
+  "path" : "/iconBasicUsage" ,
+  "name" : "iconBasicUsage" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -134,9 +134,9 @@
   } ,
   "children" : [
     {
-      "path" : "/aboutIcon" ,
-      "name" : "aboutIcon" ,
-      "component" : "welcome/SystemLog" ,
+      "path" : "/iconBasicUsage" ,
+      "name" : "iconBasicUsage" ,
+      "component" : "abouticon/iconbasicusage/IconBasicUsage" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
@@ -145,8 +145,8 @@
     }
   ]
 } , {
-  "path" : "/aboutButton" ,
-  "name" : "aboutButton" ,
+  "path" : "/buttonBasicUsage" ,
+  "name" : "buttonBasicUsage" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -155,9 +155,9 @@
   } ,
   "children" : [
     {
-      "path" : "/aboutButton" ,
-      "name" : "aboutButton" ,
-      "component" : "welcome/SystemLog" ,
+      "path" : "/buttonBasicUsage" ,
+      "name" : "buttonBasicUsage" ,
+      "component" : "aboutbutton/buttonbasicusage/ButtonBasicUsage" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

@@ -23,7 +23,7 @@ export default function h(title) {
         { name: '海南', value: randomData() }, { name: '台湾', value: randomData() },
         { name: '香港', value: randomData() }, { name: '澳门', value: randomData() }
     ];
-    let color = require('@/color');
+    let color = require('@/web-config/color');
 
     let option = {
         title: {

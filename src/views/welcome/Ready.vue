@@ -73,7 +73,7 @@
                             : pathMatch.substr(1, pathMatch.length);
                     that.$router.replace({name});
                     this.$setTitle(this.language[this.otherInfo.helloTitle]);
-                    this.$setIco(this.otherInfo.icon);
+                    this.$setIco(this.otherInfo.webIco);
                     // clearTimeout(t);
                     // }, 2000);
                 }

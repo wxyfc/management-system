@@ -204,7 +204,7 @@ Date.prototype.$format = function (fmt) {
     return fmt;
 }
 Vue.prototype.$dataFormat = function (data) {
-    let colors = require("@/color.js");
+    let colors = require("@/web-config/color.js");
     try {
         switch (Vue.prototype.$type(data)) {
             case "[object String]":

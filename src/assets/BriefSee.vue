@@ -23,7 +23,7 @@
 </template>
 
 <script>
-let colors = require("@/color.js");
+let colors = require("@/web-config/color.js");
 export default {
   components: {
     CountTo: () => import("vue-count-to")

@@ -9,8 +9,8 @@
             <div slot="content">
                 {{language.tableSelectTooltip}}
                 <br>
-                <el-button type="text" @click.stop="thisNotShow=true">{{language.thisNotShow}}</el-button>
-                <el-button type="text" @click.stop="tableNotShowFun">{{language.tableNotShow}}</el-button>
+                <mdb type="text" @click="thisNotShow=true">{{language.thisNotShow}}</mdb>
+                <mdb type="text" @click="tableNotShowFun">{{language.tableNotShow}}</mdb>
             </div>
             <el-table
                     ref="meltable"

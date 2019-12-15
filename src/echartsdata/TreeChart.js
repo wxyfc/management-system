@@ -1,5 +1,5 @@
 
-import colors from "@/color";
+import colors from "@/web-config/color.js";
 function hf(data, dataC) {
     let d = []
     data.forEach(e => {

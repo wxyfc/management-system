@@ -15,7 +15,6 @@ let colors = [
     "#CCFF66",
     "#b0ca71",
     "#ffec47",
-
 ]
 
 module.exports = colors;

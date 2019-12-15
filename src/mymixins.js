@@ -114,8 +114,8 @@ let m = {
         } ,
         ifServerCode ( i ) {
             let s = [ 200 ];//成功
-            let w = [ 101 , 100 , 1002 , 20102 , 20101 ];//警告
-            let e = [ 10101 , 10211 , 10212 , 10213 , 10214 , 10215 , 10216 ];//失败
+            let w = [ 300 ];//警告
+            let e = [ 400 ];//失败
             if ( s.includes ( i ) ) {
                 return 1;
             } else if ( w.includes ( i ) ) {

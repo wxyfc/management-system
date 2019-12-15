@@ -102,6 +102,10 @@
     white-space: nowrap;
 }
 
+.width100 {
+    width: 100%
+}
+
 .width80 {
     width: 80%
 }
@@ -140,6 +144,11 @@
     min-width: 3vw;
     font-size: 16px;
     padding: 1vh;
+}
+
+.menuIcon {
+    /*菜单图标*/
+    font-size: 20px;
 }
 
 .icon {
@@ -271,7 +280,7 @@ body {
     font-weight: 500;
 }
 
-.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
     background-color: rgba(131, 176, 238, 0.26);
     color: rgb(15, 119, 255);
     font-weight: 500;
@@ -283,7 +292,7 @@ body {
     min-width: auto;
 }
 
-.el-tree>.el-tree-node {
+.el-tree > .el-tree-node {
     display: inline-block;
     min-width: 99.7%;
 }

@@ -47,7 +47,7 @@ export default {
     colors: {
       type: Array,
       default: () => {
-        return require("@/color.js");
+        return require("@/web-config/color.js");
       }
     },
     span: {

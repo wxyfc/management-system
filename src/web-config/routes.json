@@ -166,8 +166,8 @@
     }
   ]
 } , {
-  "path" : "/aboutDatePicker" ,
-  "name" : "aboutDatePicker" ,
+  "path" : "/datePickerBasicUsage" ,
+  "name" : "datePickerBasicUsage" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -176,9 +176,9 @@
   } ,
   "children" : [
     {
-      "path" : "/aboutDatePicker" ,
-      "name" : "aboutDatePicker" ,
-      "component" : "welcome/SystemLog" ,
+      "path" : "/datePickerBasicUsage" ,
+      "name" : "datePickerBasicUsage" ,
+      "component" : "aboutdatepicker/datepickerbasicusage/DatePickerBasicUsage" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

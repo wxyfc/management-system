@@ -1,6 +1,6 @@
 <template>
-    <el-card class="h997">
-        <h1>404</h1>
+    <el-card class="h9999">
+        <h1 class="alncnt">404</h1>
         <!-- <el-input v-model="city">
           <mdb slot="append" icon="el-icon-search" @click="get"></mdb>
         </el-input>-->
@@ -24,33 +24,35 @@
 
 <script>
     export default {
-        name: "error-404",
-        data() {
+        name : "error-404" ,
+        data () {
             return {
-                weather: {},
-                city: "上海",
-                img: ["cherry", "durian", "cucumber", "pitaya", "pear", "peach", "mango"]
+                weather : {} ,
+                city : "上海" ,
+                img : [ "cherry" , "durian" , "cucumber" , "pitaya" , "pear" , "peach" , "mango" ]
             };
-        },
-        methods: {
-            async req() {
+        } ,
+        methods : {
+            async req () {
                 let version = "v6";
                 let appid = "25161667";
                 let appsecret = "y5cW8f2j";
                 // let cityid = "101020100";
-                this.weather = await this.$Get("/weather", {
-                    appid,
-                    appsecret,
-                    version,
-                    city: this.city
-                });
+                this.weather = await this.$Get ( "/weather" , {
+                    appid ,
+                    appsecret ,
+                    version ,
+                    city : this.city
+                } );
             }
-        },
-        mounted() {
+        } ,
+        mounted () {
             // this.req();
-        },
-        beforeDestroy() {
-            this.$router.go(-1);
+        } ,
+        beforeDestroy () {
+            if ( this.$route.name == "ready" ) {
+                this.$router.go ( -1 );
+            }
         }
     };
 </script>

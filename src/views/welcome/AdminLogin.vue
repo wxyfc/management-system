@@ -1,10 +1,10 @@
 <template>
     <div class="mainTag">
-        <!-- <el-image v-if="otherInfo.bgImg" :src="otherInfo.bgImg" class="w100 h997" fit="cover"></el-image> -->
-        <img v-if="otherInfo.bgImg" :src="otherInfo.bgImg" class="w999 h997" style="object-fit:cover;">
+        <img v-if="otherInfo.bgImg" :src="otherInfo.bgImg" class="w9999 h9999" style="object-fit:cover;">
         <el-dialog
                 :visible="true"
                 :show-close="false"
+                :modal="false"
                 top="30vh"
                 :width="dialogWidth"
                 custom-class="transparent02"
@@ -52,7 +52,12 @@
                     username : null ,
                     password : null
                 } ,
-                historicalAccount : {}
+                historicalAccount : {
+                    admin : "admin" ,
+                    tourist : "tourist" ,
+                    users : "users" ,
+                    other : "other"
+                }
             };
         } ,
         components : {
@@ -149,7 +154,7 @@
         mounted () {
             // let userMemory = getLocal("userMemory");
             this.ruleForm = getLocal ( "loginForm" );
-            this.historicalAccount = getLocal ( "historicalAccount" );
+            // this.historicalAccount = getLocal ( "historicalAccount" );
             // if (this.$isTrue(userMemory)) {
             if ( false ) {
                 this.setOtherInfo ( userMemory.otherInfo );
@@ -167,7 +172,7 @@
                 language : that.language
             } );
             setLocal ( "loginForm" , that.ruleForm );
-            setLocal ( "historicalAccount" , that.historicalAccount );
+            // setLocal ( "historicalAccount" , that.historicalAccount );
         }
     };
 </script>

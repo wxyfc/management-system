@@ -7,7 +7,7 @@
     :active-text-color="activeColor"
     :unique-opened="otherInfo.menuUnique"
     router
-    class="h997 overflowauto"
+    class="h9999 overflowauto"
   >
     <el-menu-item index="logo" style="padding:0;pointerEvents:none">
       <img

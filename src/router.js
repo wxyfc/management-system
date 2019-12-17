@@ -6,6 +6,7 @@ let router = [
     {
         path : '/' ,
         redirect : { name : "login" } ,
+        replace : true ,
         meta : {
             intercept : false ,
             noQuickTabs : true ,
@@ -14,6 +15,7 @@ let router = [
     {
         path : '/login' ,
         name : 'login' ,
+        replace : true ,
         component : () => import('@/views/welcome/AdminLogin.vue') ,
         meta : {
             intercept : false ,
@@ -23,6 +25,7 @@ let router = [
     {
         path : '*' ,
         redirect : { name : "ready" } ,
+        replace : true ,
         meta : {
             intercept : false ,
             noQuickTabs : true ,
@@ -31,6 +34,7 @@ let router = [
     {
         path : '/404' ,
         name : '404' ,
+        replace : true ,
         component : () => import('@/views/welcome/404.vue') ,
         meta : {
             intercept : false ,
@@ -40,6 +44,7 @@ let router = [
     {
         path : '/ready' ,
         name : 'ready' ,
+        replace : true ,
         component : () => import('@/views/welcome/Ready.vue') ,
         meta : {
             intercept : true ,

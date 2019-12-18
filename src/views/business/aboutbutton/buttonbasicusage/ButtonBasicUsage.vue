@@ -24,7 +24,7 @@
                     <mdb :tooltip="language.setDisabledTime" :showDisabledTime="true" :disabledTime="disabledTime">{{ language.setDisabledTime }}</mdb>
                 </el-form-item>
                 <el-form-item>
-                    <el-slider v-model="disabledTime" class="width50" :min="0" :max="60" input-size="mini"></el-slider>
+                    <el-slider v-model="disabledTime" class="width50" :min="0" :max="60"></el-slider>
                 </el-form-item>
                 <el-form-item>
                     <span slot="label" class="emphasize">{{language.moreUsage}}</span>
@@ -52,7 +52,6 @@
                     <mdb :tooltip="language.aboutButton" :disabled="true" type="danger">{{ language.aboutButton }}</mdb>
                 </el-form-item>
             </el-form>
-
         </el-col>
     </el-row>
 </template>
@@ -65,36 +64,6 @@
             return {
                 disabledTime : 3
             };
-        } ,
-        components : {
-            // test: resolve => {require(['@/test/test.vue'], resolve)},//懒加载
-            //test: () => import('@/test/test.vue')
-        } ,
-        props : {
-            // test: {
-            //   type: String,
-            //   default: () => {
-            //     let colors = require("@/web-config/color.js");
-            //     return colors[Math.ceil(Math.random() * colors.length - 1)];
-            //   }
-            // }
-        } ,
-        computed : {
-            // test() {
-            //   let data = null;
-            //   return data;
-            // }
-        } ,
-        watch : {
-            //监听数据变化
-            // test: {
-            //   deep: true,
-            //   immediate: true,
-            //   handler(newv, oldv) {}
-            // }
-        } ,
-        methods : {} ,
-        mounted () {
         } ,
     };
 </script>

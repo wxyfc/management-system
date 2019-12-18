@@ -13,7 +13,7 @@
                 <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="18" style="color:#eee">
                     <div class="largeTitle" @dblclick="hiddRefresh">{{language[otherInfo.helloTitle]}}</div>
                 </el-col>
-                <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="6" class="alnrit" v-show="false">
+                <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="6" class="alnrit">
                     <SelectLanguage></SelectLanguage>
                 </el-col>
             </el-row>

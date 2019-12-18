@@ -13,7 +13,7 @@
                     <el-form-item>
                         <!--图标统一风格大小-->
                         <span slot="label" class="emphasize">{{language.iconUnifiedStyleColor}}</span>
-                        <el-slider v-model="iconUnifiedStyleFontSize" class="width50" :min="12" :max="28" input-size="mini"></el-slider>
+                        <el-slider v-model="iconUnifiedStyleFontSize" class="width50" :min="12" :max="28"></el-slider>
                     </el-form-item>
                     <el-form-item>
                         <!--图标统一风格颜色-->

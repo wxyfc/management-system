@@ -102,8 +102,12 @@
     white-space: nowrap;
 }
 
-.width100 {
-    width: 100%
+.h100 {
+    height: 99.7%;
+}
+
+.w100 {
+    width: 99.7%;
 }
 
 .width80 {
@@ -199,16 +203,9 @@
 }
 
 .mainAppContent {
-    height: 89vh;
-    border-radius: 4px;
-}
-
-.h100 {
-    height: 99.7%;
-}
-
-.w100 {
+    height: 90vh;
     width: 99.7%;
+    border-radius: 4px;
 }
 
 .echarsCSS {

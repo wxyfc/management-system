@@ -1,5 +1,5 @@
 <template >
-  <div class="shadow mainAppContent w100" style="overflow: auto;">
+  <div class="shadow mainAppContent" style="overflow: auto;">
     <!-- <transition
       name="mainapp-classes-transition"
       enter-active-class="animated zoomInDown"

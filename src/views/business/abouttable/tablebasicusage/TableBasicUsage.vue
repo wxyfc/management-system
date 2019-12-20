@@ -2,6 +2,8 @@
     <el-row>
         <mt>{{language[$options.name]}}</mt>
         <div class="margin1vw" style="height:80%;">
+            <el-switch v-model="buttonDisplay" active-value="show" inactive-value="display"></el-switch>
+            {{ language.switchButtonShowState }}：{{ buttonDisplay=="show"? language.hide:language.prohibit}}
             <UiPageTable
                     ref="newTable"
                     :tableData="dataList"
@@ -21,42 +23,16 @@
         name : "tableBasicUsage" ,
         data () {
             return {
-                TableConfig : {
-                    border : true ,
-                    stripe : true ,
-                    highlight : true ,
-                    single : true ,
-                    disabled : false ,
-                    button : {
-                        value : "state" ,
-                        display : "show" ,
-                        list : [ { text : "add" , type : "primary" , value : [ 1 ] } ,
-                            { text : "success" , type : "success" , value : [ 1 , 2 ] } ,
-                            { text : "warning" , type : "warning" , value : [ 1 , 3 ] } ,
-                            { text : "delete" , type : "danger" , value : [ 2 , 3 ] } ]
-                    }
-                } ,
                 page : 1 ,
                 pageSize : 30 ,
                 total : 0 ,
-                dataList : [ { username : 123 , email : 456 , state : 1 } ,
-                    { username : 123 , email : 456 , state : 2 } ,
-                    { username : 123 , email : 456 , state : 3 } ,
-                    { username : 123 , email : 456 , state : 4 } ] ,
-                selectTableItem : {}
+                dataList : [] ,
+                selectTableItem : {} ,
+                buttonDisplay : "display"
             };
         } ,
         components : {
             UiPageTable : () => import("@/assets/UiPageTable")
-        } ,
-        props : {
-            // test: {
-            //   type: String,
-            //   default: () => {
-            //     let colors = require("@/web-config/color.js");
-            //     return colors[Math.ceil(Math.random() * colors.length - 1)];
-            //   }
-            // }
         } ,
         computed : {
             PageConfig () {
@@ -64,15 +40,26 @@
                     total : this.total ,
                     size : this.pageSize
                 };
-            }
-        } ,
-        watch : {
-            //监听数据变化
-            // test: {
-            //   deep: true,
-            //   immediate: true,
-            //   handler(newv, oldv) {}
-            // }
+            } ,
+            TableConfig () {
+                return {
+                    border : true ,
+                    stripe : true ,
+                    highlight : true ,
+                    // single : true ,
+                    disabled : false ,
+                    button : {
+                        value : "state" ,
+                        display : this.buttonDisplay ,
+                        list : [ { text : "state:1" , type : "primary" , value : [ 1 , 2 ] } ,
+                            { text : "state:1,2" , type : "success" , value : [ 1 , 3 ] } ,
+                            { text : "state:1,3" , type : "warning" , value : [ 1 , 4 ] } ,
+                            { text : "state:2,3" , type : "danger" , value : [ 2 , 3 ] } ,
+                            { text : "state:2,4" , type : "info" , value : [ 2 , 4 ] } ,
+                            { text : "state:3,4" , type : "" , value : [ 3 , 4 ] } ]
+                    }
+                }
+            } ,
         } ,
         methods : {
             clickPage ( d , l ) {
@@ -84,23 +71,19 @@
                 this.selectTableItem = t.length > 0 ? this.$avoid ( t[ 0 ] ) : {};
             } ,
             getRequest () {
-                let projectId = this.userInfo.projectId;
-                let userProject = this.userInfo.userProject;
-                this.get ( `/zone/1231321/${userProject}` , {} ).then ( res => {
-                    let data = res.Data;
-                    this.List = data;
+                this.post ( `/data/table` , {
+                    maxState : 4 ,
+                    page : this.page ,
+                    pageSize : this.pageSize ,
+                    data : [ "username" , "email" ]
+                } ).then ( res => {
+                    this.dataList = res.data;
+                    this.total = res.total;
                 } );
             } ,
-            postRequest () {
-                let projectId = this.userInfo.projectId;
-                let userProject = this.userInfo.userProject;
-                this.post ( "/auth/login" , {} ).then ( res => {
-                    let data = res.Data;
-                    this.List = data;
-                } );
-            }
         } ,
         mounted () {
+            this.getRequest ();
         }
     };
 </script>

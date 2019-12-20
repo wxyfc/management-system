@@ -33,7 +33,7 @@
                     <el-input class="width80" type="password" size="medium" v-model="ruleForm.password" :maxlength="20" show-password prefix-icon="el-icon-tickets"></el-input>
                 </el-form-item>
                 <el-form-item class="alncnt">
-                    <mdb size="medium" type="primary" @click="submitForm('ruleForm')" class="width80"> {{language.signIn}}</mdb>
+                    <mdb v-permission="1" size="medium" type="primary" @click="submitForm('ruleForm')" class="width80"> {{language.signIn}}</mdb>
                 </el-form-item>
             </el-form>
         </el-dialog>
@@ -116,6 +116,7 @@
                 // let config = await this.$Get(`/web-config/config-admin.json`);
                 let config = require ( "@/web-config/config-admin.json" );
                 this.setOtherInfo ( config );
+                this.$setIco ( this.otherInfo.webIco );
                 this.resizeHandler ();
             } ,
             submitForm ( formName ) {

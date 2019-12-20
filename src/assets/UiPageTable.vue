@@ -93,12 +93,14 @@
                                      v-show="btitem.value.includes(scope.row[TableConfig.button.value])"
                                      :type="btitem.type"
                                      @click="handleButton(scope.row,btitem.text)"
+                                     class="margin1vw-r"
                                 >{{btitem.text}}
                                 </mdb>
                                 <mdb v-else
                                      :disabled="!btitem.value.includes(scope.row[TableConfig.button.value])"
                                      :type="btitem.type"
                                      @click="handleButton(scope.row,btitem.text)"
+                                     class="margin1vw-r"
                                 >{{btitem.text}}
                                 </mdb>
                             </fragment>
@@ -124,7 +126,7 @@
 </template>
 
 <script>
-    import { cellDataFormat } from "@/function";
+    import { cellDataFormat , $addCSS , $dataFormat } from "@/function";
 
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
@@ -242,9 +244,9 @@
             } ,
             handCss () {
                 if ( this.TableConfig.single ) {
-                    this.$addCSS ( ".el-checkbox__inner{ border-radius:7px;}" );
+                    $addCSS ( ".el-checkbox__inner{ border-radius:7px;}" );
                 } else {
-                    this.$addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
+                    $addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
                 }
             } ,
             dataFormat ( is , r , c ) {

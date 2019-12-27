@@ -25,13 +25,6 @@ export default function f () {
             label : language.email ,
             fixed : true ,
         } ,
-        {
-            width : "220" ,
-            prop : "state" ,
-            align : "center" ,
-            label : language.buttonState ,
-            fixed : true ,
-        } ,
     ]
     return arr;
 };

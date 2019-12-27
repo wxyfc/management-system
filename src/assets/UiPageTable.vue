@@ -79,7 +79,7 @@
                         </el-form>
                     </template>
                 </el-table-column>
-                <!-- 可能会用到的按钮列 不完整功能 无法根据状态显示 -->
+                <!-- 可能会用到的按钮列-->
                 <fragment v-if="TableConfig.button">
                     <el-table-column
                             :width="TableConfig.button.width*widthScale"
@@ -231,6 +231,15 @@
                 handler ( newv , oldv ) {
                     this.thisNotShow = newv;
                 }
+            } ,
+            DataConfig : {
+                deep : true ,
+                handler ( newv , oldv ) {
+                    let that = this;
+                    this.$nextTick ( () => {
+                        that.doLayout ();
+                    } )
+                }
             }
         } ,
         methods : {
@@ -328,7 +337,9 @@
                 this.setOtherInfo ( { tableNotShow : true } );
             } ,
             doLayout () {
-                this.$refs.meltable.doLayout ();
+                this.$nextTick ( () => {
+                    this.$refs.meltable.doLayout ();
+                } )
             }
         } ,
         mounted () {

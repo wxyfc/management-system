@@ -34,12 +34,16 @@ const table = function ( r ) {
     let page = b.page;
     let pageSize = b.pageSize;
     let reqData = b.data;
+    let maxState = b.maxState;
     
     if ( page < 1 || page == undefined ) {
         page = 1
     }
     if ( pageSize == undefined ) {
         pageSize = 30;
+    }
+    if ( maxState == undefined ) {
+        maxState = 4;
     }
     
     let start = ( page - 1 ) * pageSize
@@ -48,13 +52,13 @@ const table = function ( r ) {
     let resData = [];
     for ( start ; start < end ; start++ ) {
         let handReqData = reqData.map ( ( e , i ) => {
-            return e + start;
+            return e + ( start + 1 );
         } );
         let resObj = {};
         reqData.forEach ( ( e , i ) => {
             resObj[ e ] = handReqData[ i ]
         } );
-        resData.push ( { ...resObj , state : $random ( 1 , b.maxState ) } )
+        resData.push ( { ...resObj , state : $random ( 1 , maxState ) } )
     }
     
     let res = {

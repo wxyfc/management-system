@@ -329,7 +329,7 @@
   "auditState" : "audit status" ,
   "waitAuthSign" : "Waiting for authorization contract" ,
   "continueAuthSign" : "Continued authorization contract" ,
-  "continueAuthSignTooltip" : "������ȨǩԼֻ�����̻������״̬Ϊ���ȴ���ȨǩԼ�������ʹ�ã��ṩ�����̻��������п�������ĵڶ����������̻���ȨǩԼ�����ܡ�" ,
+  "continueAuthSignTooltip" : "Continued authorization signing can only be used when the merchant's review status is waiting for authorization signing. It provides the second step authorized signing of secondary merchants function for secondary merchants to continue to apply for account opening" ,
   "okAuthSign" : "Authorized contract" ,
   "waitBankAudit" : "Waiting for bank audit" ,
   "unBankAudit" : "Failed bank audit" ,

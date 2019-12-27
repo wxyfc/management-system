@@ -1,11 +1,19 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
+
+        <div class="margin1vw alnrit" style="height:5%;">
+            <!--<el-switch v-model="buttonDisplay" active-value="show" inactive-value="display"></el-switch>-->
+            <!--{{ language.switchButtonShowMode }}：{{ buttonDisplay=="show"? language.hide:language.prohibit}}-->
+            {{ language.switchButtonShowMode }}：
+            <el-radio-group v-model="buttonDisplay">
+                <el-radio-button label="show">{{ language.hide }}</el-radio-button>
+                <el-radio-button label="display">{{ language.prohibit }}</el-radio-button>
+            </el-radio-group>
+        </div>
         <div class="margin1vw" style="height:80%;">
-            <el-switch v-model="buttonDisplay" active-value="show" inactive-value="display"></el-switch>
-            {{ language.switchButtonShowState }}：{{ buttonDisplay=="show"? language.hide:language.prohibit}}
             <UiPageTable
-                    ref="newTable"
+                    ref="tableBasicUsage"
                     :tableData="dataList"
                     :TableConfig="TableConfig"
                     :PageConfig="PageConfig"

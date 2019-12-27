@@ -240,7 +240,18 @@
                         that.doLayout ();
                     } )
                 }
-            }
+            } ,
+            TableConfig : {
+                deep : true ,
+                handler ( newv , oldv ) {
+                    let that = this;
+                    this.$nextTick ( () => {
+                        that.$refs.meltable.clearSelection ();
+                        that.doLayout ();
+                        that.handCss ();
+                    } )
+                }
+            } ,
         } ,
         methods : {
             widthScaleHandler () {

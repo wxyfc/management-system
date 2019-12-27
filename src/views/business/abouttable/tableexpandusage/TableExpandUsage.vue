@@ -10,7 +10,7 @@
                 </el-radio-group>
             </el-col>
         </el-row>
-        <el-row style="height:80%;">
+        <el-row style="height:80%;" class="margin1vw">
             <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
                 <UiPageTable
                         ref="tableExpandUsage"

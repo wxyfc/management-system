@@ -1,7 +1,6 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-
         <div class="margin1vw alnrit" style="height:5%;">
             <!--<el-switch v-model="buttonDisplay" active-value="show" inactive-value="display"></el-switch>-->
             <!--{{ language.switchButtonShowMode }}：{{ buttonDisplay=="show"? language.hide:language.prohibit}}-->

@@ -214,6 +214,15 @@
         "intercept" : true ,
         "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
+    } , {
+      "path" : "/tableSingMultUsage" ,
+      "name" : "tableSingMultUsage" ,
+      "component" : "abouttable/tablesingmultusage/TableSingMultUsage" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
     }
   ]
 } , {

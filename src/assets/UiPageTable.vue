@@ -23,7 +23,6 @@
                     :cell-style="cellStyle"
                     @cell-dblclick="cellDblClick"
                     @select="select"
-                    @select-all="selectAll"
                     @row-dblclick="rowDb"
                     @selection-change="selectionChange"
                     @expand-change="expandChange"
@@ -151,7 +150,7 @@
             } ,
             cellStyle : {
                 default : () => {
-                    let c = "padding:2px 1px";
+                    let c = { padding : "2px 1px" };
                     return c;
                 }
             } ,

@@ -8,7 +8,6 @@
             >
                 <template slot="title">
                     <i :class="mli.meta.icon"></i>
-                    <!--<mi :icon="mli.meta.icon" iconClass="menuIcon"></mi>-->
                     <!-- :style="{color:mli.path == $route.path ? activeColor : otherInfo.themeTextColor}" -->
                     <span
                             slot="title"
@@ -19,7 +18,6 @@
             </el-submenu>
             <el-menu-item v-else :index="mli.path" :key="i+mList.length">
                 <i :class="mli.meta.icon"></i>
-                <!--<mi :icon="mli.meta.icon" iconClass="menuIcon"></mi>-->
                 <!-- :style="{color:mli.path == $route.path ?activeColor:otherInfo.themeTextColor}" -->
                 <span
                         slot="title"

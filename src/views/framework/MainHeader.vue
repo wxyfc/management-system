@@ -2,16 +2,16 @@
     <div :style="{backgroundColor:otherInfo.themeBackgroundColor }">
         <el-row type="flex" align="middle" class="hh5">
             <el-col :xs="9" :sm="13" :md="15" :lg="16" :xl="20">
-                <mi :icon="iClassAsideVisible" :style="{color:otherInfo.themeTextColor}" :tooltip="language.stowOpenNavMenu" @click="iClassAsideVisibleOnClick"></mi>
-                <mi :icon="iClassMenuCollapse" :style="{color:otherInfo.themeTextColor}" :tooltip="language.foldOpenNavMenu" @click="iClassMenuCollapseOnClick"></mi>
+                <mi :icon="iClassAsideVisible" :mStyle="{color:otherInfo.themeTextColor}" :tooltip="language.stowOpenNavMenu" @click="iClassAsideVisibleOnClick"></mi>
+                <mi :icon="iClassMenuCollapse" :mStyle="{color:otherInfo.themeTextColor}" :tooltip="language.foldOpenNavMenu" @click="iClassMenuCollapseOnClick"></mi>
             </el-col>
             <el-col :xs="3" :sm="3" :md="2" :lg="2" :xl="1">
-                <mi icon="el-icon-setting" :tooltip="language.openSetUp" :style="{color:otherInfo.themeTextColor}" @click="iClassDrawerCollapseOnClick"></mi>
+                <mi icon="el-icon-setting" :tooltip="language.openSetUp" :mStyle="{color:otherInfo.themeTextColor}" @click="iClassDrawerCollapseOnClick"></mi>
             </el-col>
             <el-col :xs="3" :sm="3" :md="2" :lg="2" :xl="1">
                 <el-dropdown :size="otherInfo.menuCollapse?'medium':'default'" @command="noticeSelect">
                     <el-badge is-dot>
-                        <mi icon="el-icon-bell" :style="{color:otherInfo.themeTextColor}"></mi>
+                        <mi icon="el-icon-bell" :mStyle="{color:otherInfo.themeTextColor}"></mi>
                     </el-badge>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item
@@ -85,13 +85,13 @@
             }
         } ,
         watch : {
-            "otherInfo.themeTextColor" : {
+            "otherInfo.themeBackgroundColor" : {
                 deep : true ,
                 // immediate: true,
                 handler ( newv , oldv ) {
                     $addCSS (
                         `.el-badge__content{ background-color:${$ColorReverse (
-                            this.otherInfo.themeTextColor
+                            this.otherInfo.themeBackgroundColor
                         )};}`
                     );
                 }

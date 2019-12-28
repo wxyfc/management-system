@@ -50,11 +50,11 @@
                 let that = this;
                 let allMenuList = that.otherInfo.userRoutes;
                 let menuList = that.handFor ( allMenuList );
-                return menuList;
+                that.setOtherInfo ( { menuList } );
+                return that.otherInfo.menuList;
             } ,
             activeColor () {
-                return "#1bb8ce";
-                return $ColorReverse ( this.otherInfo.themeTextColor );
+                return $ColorReverse ( this.otherInfo.themeBackgroundColor );
             }
         } ,
         methods : {

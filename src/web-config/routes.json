@@ -63,8 +63,8 @@
     }
   ]
 } , {
-  "path" : "/home" ,
-  "name" : "home" ,
+  "path" : "/recursiveMenu" ,
+  "name" : "recursiveMenu" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-house" ,
@@ -75,8 +75,8 @@
   } ,
   "children" : [
     {
-      "path" : "/home" ,
-      "name" : "home" ,
+      "path" : "/oneLevHome" ,
+      "name" : "oneLevHome" ,
       "redirect" : {
         "name" : "home"
       } ,
@@ -87,8 +87,8 @@
         "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
     } , {
-      "path" : "/test" ,
-      "name" : "test" ,
+      "path" : "/twoLevMenu" ,
+      "name" : "twoLevMenu" ,
       "component" : "test/Test" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
@@ -108,8 +108,8 @@
             "role" : [ 5233 , 5232 , 5231 , 5230 ]
           }
         } , {
-          "path" : "/home" ,
-          "name" : "home" ,
+          "path" : "/twoLevHome" ,
+          "name" : "twoLevHome" ,
           "redirect" : {
             "name" : "home"
           } ,

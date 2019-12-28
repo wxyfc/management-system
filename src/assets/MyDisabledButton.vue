@@ -1,7 +1,7 @@
 <template>
     <el-tooltip :content="tooltip" :disabled="tipDis" class="bttooltip">
         <div class="inblock" :style="longStyle">
-            <el-button :type="type" :size="size" :icon="icon" class="h100" :loading="handlerLoading&&!showDisabledTime"
+            <el-button :type="type" :size="size" :icon="icon" class="w100" :loading="handlerLoading&&!showDisabledTime"
                        :disabled="handlerDisabled" @click.stop="emtiClick" :plain="plain" :round="round" :circle="circle">
                 <span v-if="showDisabledTime&&disabledTimeNum>0">{{ disabledTimeNum }}</span>
                 <slot></slot>

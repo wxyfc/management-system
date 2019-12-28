@@ -18,7 +18,7 @@
                     <el-form-item>
                         <!--图标统一风格颜色-->
                         <span slot="label" class="emphasize">{{language.iconUnifiedStyleColor}}</span>
-                        <el-color-picker v-model="iconUnifiedStyleColor" :disabled="configThemeDisabled"></el-color-picker>
+                        <el-color-picker v-model="iconUnifiedStyleColor"></el-color-picker>
                     </el-form-item>
                 </el-form>
             </el-col>

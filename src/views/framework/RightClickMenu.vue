@@ -1,12 +1,12 @@
 <template>
     <div id="rightClickMenuId" :style="`position: fixed;top:${show.y}px;left:${show.x}px;z-index:5235;width:200px;`" @mouseleave="runMenu" @mouseover="clear">
-        <mdb class="menuItem" @click="copy">{{language.copy}}</mdb>
-        <mdb class="menuItem" @click="backUpPage">{{language.backUpPage}}</mdb>
-        <mdb class="menuItem" @click="reloadThisPage">{{language.reloadThisPage}}</mdb>
-        <mdb class="menuItem" @click="printCurrentElement" v-if="isPrint">{{language.printCurrentElement}}</mdb>
-        <mdb class="menuItem" @click="quickFeedback">{{language.quickFeedback}}</mdb>
-        <mdb class="menuItem" @click="openSetUp">{{language.openSetUp}}</mdb>
-        <mdb class="menuItem" @click="signOutLogin">{{language.signOutLogin}}</mdb>
+        <mdb :long="true" @click="copy">{{language.copy}}</mdb>
+        <mdb :long="true" @click="backUpPage">{{language.backUpPage}}</mdb>
+        <mdb :long="true" @click="reloadThisPage">{{language.reloadThisPage}}</mdb>
+        <mdb :long="true" @click="printCurrentElement" v-if="isPrint">{{language.printCurrentElement}}</mdb>
+        <mdb :long="true" @click="quickFeedback">{{language.quickFeedback}}</mdb>
+        <mdb :long="true" @click="openSetUp">{{language.openSetUp}}</mdb>
+        <mdb :long="true" @click="signOutLogin">{{language.signOutLogin}}</mdb>
     </div>
 </template>
 

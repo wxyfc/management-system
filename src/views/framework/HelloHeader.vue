@@ -4,7 +4,7 @@
             <b class="emphasize" :style="{color:otherInfo.themeTextColor}">{{userInfo.headerTitle}}</b>
         </el-col>
         <el-col :xs="4" :sm="4" :lg="3" :xl="3">
-            <mdb type="text" class="emphasize" autofocus :style="{color:otherInfo.themeTextColor}" @click="getInto">{{language.getInto}}</mdb>
+            <mdb type="text" class="emphasize" :style="{color:otherInfo.themeTextColor}" @click="getInto">{{language.getInto}}</mdb>
         </el-col>
         <el-col :xs="8" :sm="7" :lg="5" :xl="4" class="alnrit">
             <el-dropdown :size="otherInfo.menuCollapse?'medium':'default'" @command="menuSelect">

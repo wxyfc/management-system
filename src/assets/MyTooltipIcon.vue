@@ -1,7 +1,7 @@
 <template>
   <span>
     <el-tooltip :content="tooltip" :disabled="tipDis" class="bttooltip">
-      <i :class="[iconClass,icon]" :style="unified?unifiedStyle:style" @click.stop="iconClick"></i>
+      <i :class="[iconClass,icon]" :style="unified?unifiedStyle:mStyle" @click.stop="iconClick"></i>
     </el-tooltip>
   </span>
 </template>
@@ -33,7 +33,7 @@
                 type : String ,
                 default : "icon"
             } ,
-            style : {} ,
+            mStyle : {} ,
             unified : {
                 type : Boolean ,
                 default : false

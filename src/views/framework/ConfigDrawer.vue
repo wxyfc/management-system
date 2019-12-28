@@ -11,6 +11,7 @@
             :destroy-on-close="true"
     >
         <el-form label-width="30%">
+            <el-divider content-position="left">{{ language.aboutTheme }}</el-divider>
             <el-form-item>
                 <!--主题背景颜色-->
                 <span slot="label" class="emphasize">{{language.themeBackgroundColor}}</span>
@@ -39,20 +40,17 @@
                 <span slot="label" class="emphasize">{{language.iconUnifiedStyleFontSize}}</span>
                 <el-slider v-model="iconUnifiedStyleFontSize" class="width50" :min="12" :max="28" input-size="mini"></el-slider>
             </el-form-item>
+            <el-divider content-position="left">{{ language.aboutHomePage }}</el-divider>
             <el-form-item>
                 <!--首页快捷导航-->
                 <span slot="label" class="emphasize">{{language.homeQuickNav}}</span>
                 <el-switch v-model="homeQuickNav"></el-switch>
             </el-form-item>
+            <el-divider content-position="left">{{ language.aboutNavMenu }}</el-divider>
             <el-form-item>
                 <!--显示菜单栏logo-->
                 <span slot="label" class="emphasize">{{language.showMenuLogo}}</span>
                 <el-switch v-model="showMenuLogo"></el-switch>
-            </el-form-item>
-            <el-form-item>
-                <!--表格适应宽度-->
-                <span slot="label" class="emphasize">{{language.tableSelfAW}}</span>
-                <el-switch v-model="tableSelfAW"></el-switch>
             </el-form-item>
             <el-form-item>
                 <!--单个子菜单活动-->
@@ -63,6 +61,18 @@
                     <el-radio-button :label="false">{{ language.multipleInd }}</el-radio-button>
                 </el-radio-group>
             </el-form-item>
+            <el-divider content-position="left">{{ language.aboutTable }}</el-divider>
+            <el-form-item>
+                <!--表格适应宽度-->
+                <span slot="label" class="emphasize">{{language.tableSelfAW}}</span>
+                <el-switch v-model="tableSelfAW"></el-switch>
+            </el-form-item>
+            <el-form-item>
+                <!--表格使用提示-->
+                <span slot="label" class="emphasize">{{language.tableSwitch}}</span>
+                <el-switch v-model="tableNotShow"></el-switch>
+            </el-form-item>
+            <el-divider content-position="left">{{ language.aboutSystem }}</el-divider>
             <el-form-item>
                 <!--右键快捷菜单-->
                 <span slot="label" class="emphasize">{{language.rightClickMenu}}</span>
@@ -72,11 +82,6 @@
                     <el-radio-button :label="true">{{ language.quickClickMenu }}</el-radio-button>
                     <el-radio-button :label="false">{{ language.systemClickMenu }}</el-radio-button>
                 </el-radio-group>
-            </el-form-item>
-            <el-form-item>
-                <!--表格使用提示-->
-                <span slot="label" class="emphasize">{{language.tableSwitch}}</span>
-                <el-switch v-model="tableNotShow"></el-switch>
             </el-form-item>
             <el-form-item>
                 <!--选择语言-->

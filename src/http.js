@@ -7,13 +7,6 @@ import { formData } from '@/function'
 axios.defaults.timeout = 20000;                        //响应时间
 axios.defaults.headers.post[ 'Content-Type' ] = 'application/x-www-form-urlencoded;charset=UTF-8';        //配置请求头
 
-// axios.defaults.onUploadProgress = function (p) {
-// NProgress.set((p.loaded / p.total));
-// }
-// axios.defaults.onDownloadProgress = function (p) {
-// NProgress.set((p.loaded / p.total));
-// }
-
 //POST传参序列化(添加请求拦截器)
 axios.interceptors.request.use ( ( config ) => {
     //在发送请求之前做某件事

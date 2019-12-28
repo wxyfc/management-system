@@ -1,4 +1,5 @@
 {
+  "" : "" ,
   "tile" : "Power Bee Intelligent Park Management System" ,
   "getInto" : "Get into" ,
   "personal" : "personal" ,
@@ -295,7 +296,8 @@
   "businessPhone" : "Merchant phone number" ,
   "numbersEnquiry" : "According to the number query" ,
   "oddNumAndPhoneEnquiry" : "Can be arbitrarily according to WeChat merchant single number, the number of the registered person, the merchant mobile phone number, merchant number query" ,
- 
+  
+  
   "liquidationStateEnquiry" : "Query by liquidation status" ,
   "orderStateEnquiry" : "Check by billing status" ,
   "billState" : "The billing state" ,
@@ -305,8 +307,9 @@
   "okLiquidation" : "Gold has been liquidated" ,
   "selectLiquidation" : "The selection clears the gold" ,
   "selectLiquidationTooltip" : "The settlement of gold can only be carried out under the condition that the bill status is unliquidated gold After confirming the form information, multiple bills can be selected to conduct the settlement of gold together." ,
-
- "okPayment" : "have paid" ,
+  
+  
+  "okPayment" : "have paid" ,
   "unLiquidation" : "No gold has been liquidated" ,
   "unPayment" : "non-payment" ,
   "invalid" : "lost effectiveness" ,
@@ -320,15 +323,18 @@
   "ABCWeChatRecharge" : "Agricultural bank WeChat" ,
   "queryPrompt" : "Query tip: multiple criteria can combine queries" ,
   "queryPromptRecordedInfo" : "The table on this page is the query of all the account entry information. The default query is within the last three days The order status is paid." ,
-
- "querySubMerchantsListInfo" : "The form on this page is the query of all secondary merchant information.Thedefault query is  within the last month , and the audit status is has passed the bank audit" ,
-
- "query" : "query" ,
+  
+  
+  "querySubMerchantsListInfo" : "The form on this page is the query of all secondary merchant information.Thedefault query is  within the last month , and the audit status is has passed the bank audit" ,
+  
+  
+  "query" : "query" ,
   "search" : "search" ,
   "auditState" : "audit status" ,
   "waitAuthSign" : "Waiting for authorization contract" ,
   "continueAuthSign" : "Continued authorization contract" ,
   "continueAuthSignTooltip" : "Continued authorization signing can only be used when the merchant's review status is waiting for authorization signing. It provides the second step authorized signing of secondary merchants function for secondary merchants to continue to apply for account opening" ,
+  
   "okAuthSign" : "Authorized contract" ,
   "waitBankAudit" : "Waiting for bank audit" ,
   "unBankAudit" : "Failed bank audit" ,
@@ -373,13 +379,15 @@
   "unAlreadyDeclared" : "Not a statement" ,
   "alreadyDeclaredTheThirdParty" : "It stated that a tripartite agreement had been signed" ,
   "summaryAccountBalanceHints" : "Summary account balance tip: the default summary recharge method is the agricultural bank of China recharge method. You can choose other recharge methods to summarize. The search time is longer, please wait patiently." ,
-
- "subMerchantsOpenFillIn" : "Secondary merchant account opening fill in" ,
+  
+  
+  "subMerchantsOpenFillIn" : "Secondary merchant account opening fill in" ,
   "subMerchantsOpenApply" : "Application for secondary merchant account opening" ,
   "subMerchantsOpenConfirm" : "Authorized signing of secondary merchants" ,
   "subMerchantsOpenTooltip" : "Secondary merchant account opening reminder: there are two steps in the account opening application. Please do not close the window, and fill in the authorization verification code in the second step to complete the authorization signing." ,
-
- "mustNumType" : "Must be a numeric type" ,
+  
+  
+  "mustNumType" : "Must be a numeric type" ,
   "pleaseNumber" : "Please enter Numbers" ,
   "pleaseEail" : "Please fill in the email" ,
   "pleasePostel" : "Zip code, please" ,
@@ -403,10 +411,12 @@
   "pleaseIsTableSelect" : "Please select one item in the form first" ,
   "balanceAccountTooltip" : "The time for bank of agriculture to charge to the account is the next day" ,
   "tableSelectTooltip" : "The table opens the mode of multi-selection or single selection. Some functions can only be used after selecting an item in the table. Select it in the left-most selection box or double-click a row to select it." ,
-
- "orgMonthlyCheckoutSheetTooltip" : "This page is the single column table page of monthly payment of enterprises. Click or double-click a row on the leftmost to select it and you can check the bill details." ,
-
- "thisNotShow" : "No longer displayed" ,
+  
+  
+  "orgMonthlyCheckoutSheetTooltip" : "This page is the single column table page of monthly payment of enterprises. Click or double-click a row on the leftmost to select it and you can check the bill details." ,
+  
+  
+  "thisNotShow" : "No longer displayed" ,
   "foreverNotShow" : "Never show again" ,
   "tableNotShow" : "The same table is no longer displayed" ,
   "tableSwitch" : "Tips for use of forms" ,

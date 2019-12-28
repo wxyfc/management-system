@@ -11,7 +11,7 @@
             </el-col>
         </el-row>
         <el-row style="height:80%;" class="margin1vw">
-            <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
+            <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t h100">
                 <UiPageTable
                         ref="tableExpandUsage"
                         :tableData="dataList"
@@ -22,7 +22,7 @@
                         @select="selectTable"
                 ></UiPageTable>
             </el-col>
-            <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t">
+            <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t h100">
                 <el-form label-width="50%">
                     <el-form-item>
                         <span slot="label" class="emphasize"></span>
@@ -86,9 +86,9 @@
                 addDataConfigForm : {} ,
                 addDataConfigFormItem : {
                     width : 220 ,
-                    prop : "test" ,
+                    prop : "expand" ,
                     align : "left" ,
-                    label : "增加测试" ,
+                    label : "addtest" ,
                     type : "expand"
                 } ,
                 addDataConfigItemType : "expand" ,

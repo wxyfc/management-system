@@ -5,8 +5,8 @@
             <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
                 {{ language.tableSingMultUsage }}：
                 <el-radio-group v-model="tableSingMultUsageMode">
-                    <el-radio-button label="multiple">{{ language.multiple }}</el-radio-button>
-                    <el-radio-button label="single">{{ language.single }}</el-radio-button>
+                    <el-radio-button label="multiple">{{ language.multipleSelect }}</el-radio-button>
+                    <el-radio-button label="single">{{ language.singleSelect }}</el-radio-button>
                 </el-radio-group>
             </el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t">
@@ -15,7 +15,7 @@
             </el-col>
         </el-row>
         <el-row style="height:80%;" class="margin1vw">
-            <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
+            <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t h100">
                 <UiPageTable
                         ref="tableSingMultUsage"
                         :tableData="dataList"
@@ -26,7 +26,7 @@
                         @select="selectTable"
                 ></UiPageTable>
             </el-col>
-            <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t">
+            <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t h100">
                 <el-form label-width="50%">
                     <el-form-item>
                         <span slot="label" class="emphasize"></span>
@@ -92,7 +92,7 @@
                 addDataConfigForm : {} ,
                 addDataConfigFormItem : {
                     width : 220 ,
-                    prop : "test" ,
+                    prop : "export" ,
                     align : "left" ,
                     label : "addTest" ,
                     type : "common"
@@ -137,7 +137,7 @@
                 };
             } ,
             addRequestDataConfig () {
-                let list = [ "username" , "email" ];
+                let list = [ "username" , "email" , "remarks" ];
                 return list.concat ( Object.keys ( this.addDataConfigForm ) );
                 
             } ,

@@ -9,11 +9,11 @@
             router
             class="h9999 overflowauto"
     >
-        <el-menu-item index="logo" style="padding:0;pointerEvents:none">
+        <el-menu-item index="logo" style="padding:0;pointerEvents:none" v-if="otherInfo.showMenuLogo">
             <img
                     width="100%"
                     height="100%"
-                    :src="otherInfo.webIco"
+                    :src="otherInfo.menuLogo"
                     style="object-fit:contain"
             >
             <!-- :width="otherInfo.menuCollapse?`100%`:`100%`" -->

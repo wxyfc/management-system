@@ -17,12 +17,17 @@ export default function f () {
             align : "right" ,
             label : language.userName ,
             fixed : true ,
-        } ,
-        {
+        } , {
             width : "220" ,
             prop : "email" ,
             align : "right" ,
             label : language.email ,
+            fixed : true ,
+        } , {
+            width : "220" ,
+            prop : "remarks" ,
+            align : "right" ,
+            label : language.remarks ,
             fixed : true ,
         } ,
     ]

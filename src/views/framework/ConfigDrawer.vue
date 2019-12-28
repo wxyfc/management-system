@@ -45,20 +45,33 @@
                 <el-switch v-model="homeQuickNav"></el-switch>
             </el-form-item>
             <el-form-item>
+                <!--显示菜单栏logo-->
+                <span slot="label" class="emphasize">{{language.showMenuLogo}}</span>
+                <el-switch v-model="showMenuLogo"></el-switch>
+            </el-form-item>
+            <el-form-item>
                 <!--表格适应宽度-->
                 <span slot="label" class="emphasize">{{language.tableSelfAW}}</span>
                 <el-switch v-model="tableSelfAW"></el-switch>
             </el-form-item>
             <el-form-item>
-                <!--单个菜单活动-->
-                <span slot="label" class="emphasize">{{language.menuUnique}}</span>
-                <el-switch v-model="menuUnique"></el-switch>
+                <!--单个子菜单活动-->
+                <span slot="label" class="emphasize">{{language.menuSonUnique}}</span>
+                <!--<el-switch v-model="menuUnique"></el-switch>-->
+                <el-radio-group v-model="menuUnique">
+                    <el-radio-button :label="true">{{ language.singleInd }}</el-radio-button>
+                    <el-radio-button :label="false">{{ language.multipleInd }}</el-radio-button>
+                </el-radio-group>
             </el-form-item>
             <el-form-item>
                 <!--右键快捷菜单-->
                 <span slot="label" class="emphasize">{{language.rightClickMenu}}</span>
                 <!--<span slot="label" class="emphasize">{{rightClickMenu?language.rightClickMenu:language.systemClickMenu}}</span>-->
-                <el-switch v-model="rightClickMenu"></el-switch>
+                <!--<el-switch v-model="rightClickMenu"></el-switch>-->
+                <el-radio-group v-model="rightClickMenu">
+                    <el-radio-button :label="true">{{ language.quickClickMenu }}</el-radio-button>
+                    <el-radio-button :label="false">{{ language.systemClickMenu }}</el-radio-button>
+                </el-radio-group>
             </el-form-item>
             <el-form-item>
                 <!--表格使用提示-->
@@ -91,6 +104,14 @@
                 } ,
                 set ( v ) {
                     this.setOtherInfo ( { homeQuickNav : v } );
+                }
+            } ,
+            showMenuLogo : {
+                get () {
+                    return this.otherInfo.showMenuLogo;
+                } ,
+                set ( v ) {
+                    this.setOtherInfo ( { showMenuLogo : v } );
                 }
             } ,
             tableSelfAW : {

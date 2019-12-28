@@ -226,8 +226,8 @@
     }
   ]
 } , {
-  "path" : "/systemManagement" ,
-  "name" : "systemManagement" ,
+  "path" : "/menuManagement" ,
+  "name" : "menuManagement" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -239,24 +239,6 @@
       "path" : "/menuManagement" ,
       "name" : "menuManagement" ,
       "component" : "admin/routemanagement/RouteManagement" ,
-      "meta" : {
-        "icon" : "el-icon-sugar" ,
-        "intercept" : true ,
-        "role" : [ 5233 , 5232 , 5231 , 5230 ]
-      }
-    } , {
-      "path" : "/accountManagement" ,
-      "name" : "accountManagement" ,
-      "component" : "admin/accountmanagement/AccountManagement" ,
-      "meta" : {
-        "icon" : "el-icon-sugar" ,
-        "intercept" : true ,
-        "role" : [ 5233 , 5232 , 5231 , 5230 ]
-      }
-    } , {
-      "path" : "/roleManagement" ,
-      "name" : "roleManagement" ,
-      "component" : "admin/rolemanagement/RoleManagement" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

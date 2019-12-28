@@ -37,6 +37,8 @@
 </template>
 
 <script>
+    import { $addCSS } from "@/function";
+
     export default {
         name : "VertRollS" ,
         data () {
@@ -357,7 +359,7 @@
                 }
             } ,
             shuffle : function ( i ) {
-                this.$addCSS (
+                $addCSS (
                     `.list-complete-item{transition: all ${i ? i : 4}s;display: block;}`
                 );
                 let item = this.data[ 0 ];
@@ -365,7 +367,7 @@
                 this.data.splice ( 0 , 1 );
             } ,
             adShuffle () {
-                this.$addCSS ( ".list-complete-item{transition: all 0s;display: block;}" );
+                $addCSS ( ".list-complete-item{transition: all 0s;display: block;}" );
                 let item = this.data[ this.data.length - 1 ];
                 this.data.splice ( 0 , 0 , item );
                 this.data.splice ( this.data.length - 1 , 1 );

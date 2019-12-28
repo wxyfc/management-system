@@ -79,7 +79,7 @@
                         </el-form>
                     </template>
                 </el-table-column>
-                <!-- 可能会用到的按钮列 不完整功能 无法根据状态显示 -->
+                <!-- 可能会用到的按钮列-->
                 <fragment v-if="TableConfig.button">
                     <el-table-column
                             :width="TableConfig.button.width*widthScale"
@@ -93,12 +93,14 @@
                                      v-show="btitem.value.includes(scope.row[TableConfig.button.value])"
                                      :type="btitem.type"
                                      @click="handleButton(scope.row,btitem.text)"
+                                     class="margin1vw-r"
                                 >{{btitem.text}}
                                 </mdb>
                                 <mdb v-else
                                      :disabled="!btitem.value.includes(scope.row[TableConfig.button.value])"
                                      :type="btitem.type"
                                      @click="handleButton(scope.row,btitem.text)"
+                                     class="margin1vw-r"
                                 >{{btitem.text}}
                                 </mdb>
                             </fragment>
@@ -124,7 +126,7 @@
 </template>
 
 <script>
-    import { cellDataFormat } from "@/function";
+    import { cellDataFormat , $addCSS , $dataFormat } from "@/function";
 
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
@@ -229,7 +231,27 @@
                 handler ( newv , oldv ) {
                     this.thisNotShow = newv;
                 }
-            }
+            } ,
+            DataConfig : {
+                deep : true ,
+                handler ( newv , oldv ) {
+                    let that = this;
+                    this.$nextTick ( () => {
+                        that.doLayout ();
+                    } )
+                }
+            } ,
+            TableConfig : {
+                deep : true ,
+                handler ( newv , oldv ) {
+                    let that = this;
+                    this.$nextTick ( () => {
+                        that.$refs.meltable.clearSelection ();
+                        that.doLayout ();
+                        that.handCss ();
+                    } )
+                }
+            } ,
         } ,
         methods : {
             widthScaleHandler () {
@@ -242,9 +264,9 @@
             } ,
             handCss () {
                 if ( this.TableConfig.single ) {
-                    this.$addCSS ( ".el-checkbox__inner{ border-radius:7px;}" );
+                    $addCSS ( ".el-checkbox__inner{ border-radius:7px;}" );
                 } else {
-                    this.$addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
+                    $addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
                 }
             } ,
             dataFormat ( is , r , c ) {
@@ -326,7 +348,9 @@
                 this.setOtherInfo ( { tableNotShow : true } );
             } ,
             doLayout () {
-                this.$refs.meltable.doLayout ();
+                this.$nextTick ( () => {
+                    this.$refs.meltable.doLayout ();
+                } )
             }
         } ,
         mounted () {

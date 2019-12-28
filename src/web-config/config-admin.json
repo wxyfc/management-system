@@ -3,7 +3,8 @@
   
   
   "helloTitle" : "adminTitle" ,
-  "webIco" : "https://cloud.tencent.com/favicon.ico" ,
+  "webIco" : "https://raw.githubusercontent.com/user-yun/share/master/yun.ico" ,
+  "happyIco" : "https://raw.githubusercontent.com/user-yun/share/master/yun.ico" ,
   "themeBackgroundColor" : "#304156" ,
   "themeTextColor" : "#BFCBD9" ,
   "iconUnifiedStyleColor" : "#304156" ,

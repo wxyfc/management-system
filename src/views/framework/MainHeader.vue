@@ -52,6 +52,8 @@
 </template>
 
 <script>
+    import { $addCSS , $ColorReverse } from "@/function";
+
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "mainHeader" ,
@@ -87,8 +89,8 @@
                 deep : true ,
                 // immediate: true,
                 handler ( newv , oldv ) {
-                    this.$addCSS (
-                        `.el-badge__content{ background-color:${this.$ColorReverse (
+                    $addCSS (
+                        `.el-badge__content{ background-color:${$ColorReverse (
                             this.otherInfo.themeTextColor
                         )};}`
                     );

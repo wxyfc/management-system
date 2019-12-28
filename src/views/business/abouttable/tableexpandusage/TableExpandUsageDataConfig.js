@@ -16,21 +16,11 @@ export default function f () {
             prop : "username" ,
             align : "right" ,
             label : language.userName ,
-            fixed : true ,
-        } ,
-        {
+        } , {
             width : "220" ,
             prop : "email" ,
             align : "right" ,
             label : language.email ,
-            fixed : true ,
-        } ,
-        {
-            width : "220" ,
-            prop : "state" ,
-            align : "center" ,
-            label : language.buttonState ,
-            fixed : true ,
         } ,
     ]
     return arr;

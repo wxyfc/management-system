@@ -124,8 +124,8 @@
     }
   ]
 } , {
-  "path" : "/iconBasicUsage" ,
-  "name" : "iconBasicUsage" ,
+  "path" : "/aboutIcon" ,
+  "name" : "aboutIcon" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -145,8 +145,8 @@
     }
   ]
 } , {
-  "path" : "/buttonBasicUsage" ,
-  "name" : "buttonBasicUsage" ,
+  "path" : "/aboutButton" ,
+  "name" : "aboutButton" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -166,8 +166,8 @@
     }
   ]
 } , {
-  "path" : "/datePickerBasicUsage" ,
-  "name" : "datePickerBasicUsage" ,
+  "path" : "/aboutDatePicker" ,
+  "name" : "aboutDatePicker" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -226,13 +226,13 @@
     }
   ]
 } , {
-  "path" : "/menuManagement" ,
-  "name" : "menuManagement" ,
+  "path" : "/systemManagement" ,
+  "name" : "systemManagement" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
     "intercept" : true ,
-    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+    "role" : [ 5233 ]
   } ,
   "children" : [
     {
@@ -242,7 +242,7 @@
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
-        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+        "role" : [ 5233 ]
       }
     }
   ]

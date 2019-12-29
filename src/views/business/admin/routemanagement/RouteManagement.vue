@@ -1,44 +1,73 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div class="margin1vw" style="height:80%;">
+        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="margin1vw">
             <el-tree ref="menuManagementTree" :data="treeData" node-key="name" @check="treeCheckFun" :expand-on-click-node="false"
-                     default-expand-all show-checkbox>
+                     default-expand-all show-checkbox check-strictly>
                 <div class="custom-tree-node" slot-scope="{ node, data }">
-                    <mi :icon="data.meta.icon" iconClass></mi>
-                    <span>{{ language[data.name] }}</span>
+                    <mi :icon="data.meta.icon" iconClass="title"></mi>
+                    <span class="emphasize">{{ language[data.name] }}</span>
                 </div>
             </el-tree>
-        </div>
+        </el-col>
     </el-row>
 </template>
 
 <script>
+    import { $addCSS } from "@/function";
+    
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "menuManagement" ,
         data () {
-            return {};
+            return {
+                treeData : []
+            };
         } ,
-        components : {} ,
-        props : {} ,
-        computed : {
-            treeData () {
-                let data = this.$avoid ( this.otherInfo.menuList );
-                return data;
-            }
-        } ,
-        watch : {} ,
         methods : {
             treeCheckFun ( item , list ) {
-                this.$log ( item );
-                this.$log ( list );
+                let that = this;
+                let keyObj = {}
+                list.checkedNodes.forEach ( ( e , i ) => {
+                    that.$set ( keyObj , e.name , e.meta.role );
+                } );
+                this.handMenu ( this.otherInfo.menuList , keyObj );
+            } ,
+            handMenu ( list , keyObj ) {
+                let that = this;
+                list.forEach ( ( e , i ) => {
+                    if ( e.children.length > 0 ) {
+                        that.handMenu ( e.children , keyObj )
+                    }
+                    if ( !Object.keys ( keyObj ).includes ( e.name ) ) {
+                        that.$set ( e.meta , "role" , [] )
+                    } else {
+                        that.$set ( e.meta , "role" , keyObj[ e.name ] )
+                    }
+                } );
+            } ,
+            showTree () {
+                this.treeData = this.$avoid ( this.otherInfo.menuList );
+                let checkList = [];
+                this.handTreeCheck ( this.treeData , checkList )
+                this.$refs.menuManagementTree.setCheckedKeys ( checkList );
+            } ,
+            handTreeCheck ( list , keyList ) {
+                let that = this;
+                list.forEach ( ( e , i ) => {
+                    if ( e.children.length > 0 ) {
+                        that.handTreeCheck ( e.children , keyList )
+                    }
+                    keyList.push ( e.name );
+                } );
             }
         } ,
         mounted () {
-            this.$refs.menuManagementTree.setCheckedKeys ( this.treeData.map ( ( e ) => {
-                return e.name
-            } ) );
+            $addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
+            this.showTree ();
+        } ,
+        activated () {
+            $addCSS ( ".el-checkbox__inner{ border-radius:2px;}" );
         }
     };
 </script>

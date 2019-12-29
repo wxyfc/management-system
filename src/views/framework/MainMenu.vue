@@ -31,7 +31,7 @@
         <!-- :style="otherInfo.menuCollapse?'transform:scale(0.9)':'transform:scale(0.9)'" -->
         <!-- <span slot="title" class="emphasize">{{userInfo.cooperativePartner}}</span> -->
         <!-- </el-menu-item> -->
-        <RecursionMenu :mList="menuList" :activeColor="activeColor"></RecursionMenu>
+        <RecursionMenu v-if="RecursionMenuHandler" :mList="menuList" :activeColor="activeColor"></RecursionMenu>
     </el-menu>
     <!-- <keep-alive> </keep-alive> <component></component> -->
 </template>
@@ -42,22 +42,44 @@
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "mainMenu" ,
+        data () {
+            return {
+                RecursionMenuHandler : true
+            };
+        } ,
         components : {
             RecursionMenu : () => import("@/views/framework/RecursionMenu")
         } ,
         computed : {
             menuList () {
-                let that = this;
-                let allMenuList = that.otherInfo.userRoutes;
-                let menuList = that.handFor ( allMenuList );
-                that.setOtherInfo ( { menuList } );
-                return that.otherInfo.menuList;
+                return this.otherInfo.menuList;
             } ,
             activeColor () {
                 return $ColorReverse ( this.otherInfo.themeBackgroundColor );
             }
         } ,
+        created () {
+            this.handlerMenu ();
+        } ,
+        watch : {
+            menuList : {
+                deep : true ,
+                handler ( newv , oldv ) {
+                    let that = this;
+                    this.RecursionMenuHandler = false;
+                    this.$nextTick ( () => {
+                        that.RecursionMenuHandler = true;
+                    } )
+                }
+            }
+        } ,
         methods : {
+            handlerMenu () {
+                let that = this;
+                let allMenuList = this.$avoid ( that.otherInfo.userRoutes );
+                let menuList = that.handFor ( allMenuList );
+                that.setOtherInfo ( { menuList } );
+            } ,
             handFor ( l ) {
                 let that = this;
                 let ur = that.userInfo.userRole;

@@ -111,9 +111,10 @@
         <!-- 分页 -->
         <el-pagination
                 v-if="!TableConfig.disabled"
-                :small="false"
+                :small="otherInfo.menuCollapse"
                 background
-                layout="total, prev, pager, next, jumper"
+                :pager-count="7"
+                :layout="paginationLayout"
                 :total="PageConfig.total"
                 :page-size="PageConfig.size"
                 :current-page="page"
@@ -210,6 +211,13 @@
             }
         } ,
         computed : {
+            paginationLayout () {
+                if ( this.otherInfo.menuCollapse == true ) {
+                    return "prev, pager, next"
+                } else {
+                    return "total, prev, pager, next, jumper"
+                }
+            } ,
             handlerDataConfig () {
                 let table = [];
                 let expand = [];

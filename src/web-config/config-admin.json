@@ -1,14 +1,14 @@
 ﻿{
   "bgImg" : "登录页背景" ,
-  "bgImg" : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575016631730&di=af4ad0a2df9eec815034153e061e7813&imgtype=0&src=http%3A%2F%2Fwww.bbra.cn%2FUploadfiles%2Fimgs%2F2015%2F11%2F18%2Fjian2%2F001.jpg" ,
+  "bgImg" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/loginbg.jpg" ,
   
   
   "helloTitle" : "登录页标题" ,
   "helloTitle" : "adminTitle" ,
   "webIco" : "网站ico" ,
-  "webIco" : "https://raw.githubusercontent.com/user-yun/share/master/yun.ico" ,
+  "webIco" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/yun.ico" ,
   "menuLogo" : "菜单栏logo" ,
-  "menuLogo" : "https://raw.githubusercontent.com/user-yun/share/master/yun.ico" ,
+  "menuLogo" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/yun.ico" ,
   "themeBackgroundColor" : "主题背景颜色" ,
   "themeBackgroundColor" : "#304156" ,
   "themeTextColor" : "主题文字颜色" ,

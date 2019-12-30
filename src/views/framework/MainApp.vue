@@ -1,5 +1,5 @@
 <template >
-  <div class="shadow mainAppContent" style="overflow: auto;">
+  <div class="shadow mainAppContent w100 h100" style="overflow: auto;">
     <!-- <transition
       name="mainapp-classes-transition"
       enter-active-class="animated zoomInDown"
@@ -32,7 +32,7 @@ export default {
       return this.$store.getters.getOtherInfo;
     },
     key() {
-      return this.$route.path;
+      return this.$route.name;
     }
   }
 };

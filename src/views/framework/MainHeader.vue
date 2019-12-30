@@ -1,6 +1,6 @@
 <template>
-    <div :style="{backgroundColor:otherInfo.themeBackgroundColor }">
-        <el-row type="flex" align="middle" class="hh5">
+    <div :style="{backgroundColor:otherInfo.themeBackgroundColor }" class="h100">
+        <el-row type="flex" align="middle" class="h100">
             <el-col :xs="9" :sm="13" :md="15" :lg="16" :xl="20">
                 <mi :icon="iClassAsideVisible" :mStyle="{color:otherInfo.themeTextColor}" :tooltip="language.stowOpenNavMenu" @click="iClassAsideVisibleOnClick"></mi>
                 <mi :icon="iClassMenuCollapse" :mStyle="{color:otherInfo.themeTextColor}" :tooltip="language.foldOpenNavMenu" @click="iClassMenuCollapseOnClick"></mi>

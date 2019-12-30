@@ -1,5 +1,5 @@
 <template>
-    <el-row type="flex" align="middle" class="hh5" :style="{backgroundColor:otherInfo.themeBackgroundColor }">
+    <el-row type="flex" align="middle" class="th5" :style="{backgroundColor:otherInfo.themeBackgroundColor }">
         <el-col :xs="12" :sm="{span: 12, offset: 1}" :lg="{span: 14, offset: 2}" :xl="{span: 14, offset: 3}">
             <b class="emphasize" :style="{color:otherInfo.themeTextColor}">{{userInfo.headerTitle}}</b>
         </el-col>

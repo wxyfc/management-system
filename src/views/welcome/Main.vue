@@ -12,13 +12,15 @@
                 <MainMenu></MainMenu>
             </el-aside>
             <el-container>
-                <el-header style="padding:0;height:auto;">
+                <!--5%-->
+                <el-header style="padding:0;height: 5%;">
                     <MainHeader></MainHeader>
                 </el-header>
-                <el-header style="padding:0;height:auto;">
+                <!--5%-->
+                <el-header style="padding:0.2%;height:4%;">
                     <MainTag></MainTag>
                 </el-header>
-                <el-main style="padding:0.2vh 0.5vw;">
+                <el-main style="padding:0.2%;height: 90%;">
                     <MainApp></MainApp>
                 </el-main>
             </el-container>

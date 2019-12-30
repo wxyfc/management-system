@@ -302,7 +302,29 @@
                                 background : "#71fffc"
                             }
                         ]
-                    } ,
+                    } , {
+                        index : 15 ,
+                        obj : [
+                            {
+                                length : 12 ,
+                                text : "这是隔12长12居左" ,
+                                align : "left" ,
+                                offset : 12 ,
+                                background : "#ffac55"
+                            }
+                        ]
+                    } , {
+                        index : 16 ,
+                        obj : [
+                            {
+                                length : 12 ,
+                                text : "这是隔6长12居左" ,
+                                align : "center" ,
+                                offset : 6 ,
+                                background : "#abb8ff"
+                            }
+                        ]
+                    }
                 ]
             };
         } ,
@@ -321,7 +343,7 @@
             } ,
             DHeight : {
                 type : String ,
-                default : "20vh"
+                default : "99.9%"
             } ,
             vData : {
                 type : Array ,

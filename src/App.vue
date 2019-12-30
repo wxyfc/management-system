@@ -21,7 +21,7 @@
                 this.KickOutTime = 0;
             } ,
             beforeunloadFn ( e ) {
-                if ( this.$route.path != "/login" ) {
+                if ( this.$route.name != "login" ) {
                     setLocal ( "userMemory" , {
                         userInfo : this.userInfo ,
                         otherInfo : this.otherInfo ,

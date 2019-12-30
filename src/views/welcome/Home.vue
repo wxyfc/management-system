@@ -1,62 +1,31 @@
 <template>
-    <div class="h9999">
-        <!-- 5vh -->
-        <HelloHeader></HelloHeader>
-        <!-- 4vh -->
+    <div :class="homeHand?'h9999':'h100'">
+        <!-- 5% -->
+        <HelloHeader v-if="homeHand"></HelloHeader>
+        <!-- 5% -->
         <el-row v-if="homeQuickNav">
             <el-col :xs="24" :sm="12" :md="8" :lg="4" v-for="i in 6" :key="i">
                 <BriefSee></BriefSee>
-                <!-- <BriefSeeS :bsSmall="false"></BriefSeeS> -->
             </el-col>
         </el-row>
-        <el-col :xs="24" :md="12" :lg="8">
-            <ECharts
-                    id="PostRevenue"
-                    :height="bigHeight"
-                    :data="require('@/echartsdata/PostRevenue')('折线图图')"
-                    @clickECharts="clickECharts"
-            ></ECharts>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <ECharts id="PostRevenue" :data="require('@/echartsdata/PostRevenue')('折线图图')" @clickECharts="clickECharts"></ECharts>
         </el-col>
-        <el-col :xs="24" :md="12" :lg="8">
-            <!-- <ECharts
-              :height="bigHeight"
-              id="MapChart"
-              :data="require('@/echartsdata/MapChart').default('折线图图')"
-              @clickECharts="clickECharts"
-            ></ECharts> -->
-            <VertRollS :DHeight="bigHeight"></VertRollS>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <!--<ECharts id="MapChart" :data="require('@/echartsdata/MapChart').default('折线图图')" @clickECharts="clickECharts"></ECharts>-->
+            <VertRollS></VertRollS>
         </el-col>
-        <el-col :xs="24" :md="12" :lg="8">
-            <ECharts
-                    :height="bigHeight"
-                    id="MultiplePillarsChart"
-                    :data="require('@/echartsdata/MultiplePillarsChart')('折线图图')"
-                    @clickECharts="clickECharts"
-            ></ECharts>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <ECharts id="MultiplePillarsChart" :data="require('@/echartsdata/MultiplePillarsChart')('折线图图')" @clickECharts="clickECharts"></ECharts>
         </el-col>
-        <el-col :xs="24" :md="12" :lg="8">
-            <ECharts
-                    :height="bigHeight"
-                    id="PieChart"
-                    :data="require('@/echartsdata/PieChart')('折线图图')"
-                    @clickECharts="clickECharts"
-            ></ECharts>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <ECharts id="PieChart" :data="require('@/echartsdata/PieChart')('折线图图')" @clickECharts="clickECharts"></ECharts>
         </el-col>
-        <el-col :xs="24" :md="12" :lg="8">
-            <ECharts
-                    :height="bigHeight"
-                    id="PolylineChart"
-                    :data="require('@/echartsdata/PolylineChart')('折线图图')"
-                    @clickECharts="clickECharts"
-            ></ECharts>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <ECharts id="PolylineChart" :data="require('@/echartsdata/PolylineChart')('折线图图')" @clickECharts="clickECharts"></ECharts>
         </el-col>
-        <el-col :xs="24" :md="12" :lg="8">
-            <ECharts
-                    :height="bigHeight"
-                    id="RadarChart"
-                    :data="require('@/echartsdata/RadarChart')('折线图图')"
-                    @clickECharts="clickECharts"
-            ></ECharts>
+        <el-col :xs="24" :md="12" :lg="8" :style="{height:bigHeight}">
+            <ECharts id="RadarChart" :data="require('@/echartsdata/RadarChart')('折线图图')" @clickECharts="clickECharts"></ECharts>
         </el-col>
         <!-- @click.native="test" -->
     </div>
@@ -64,7 +33,7 @@
 
 <script>
     import { setLocal } from "@/function";
-
+    
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "home" ,
@@ -75,11 +44,22 @@
             homeQuickNav () {
                 return this.otherInfo.homeQuickNav;
             } ,
+            homeHand () {
+                return this.$route.name == "home";
+            } ,
             bigHeight () {
                 if ( this.homeQuickNav ) {
-                    return "44vh";
+                    if ( this.homeHand ) {
+                        return "44.4%";
+                    } else {
+                        return "46.9%";
+                    }
                 } else {
-                    return "47.3vh";
+                    if ( this.homeHand ) {
+                        return "47.4%";
+                    } else {
+                        return "49.9%";
+                    }
                 }
             }
         } ,

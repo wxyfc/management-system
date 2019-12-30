@@ -60,6 +60,17 @@
         "noKeepAlive" : true ,
         "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
+    } , {
+      "path" : "/embHome" ,
+      "name" : "embHome" ,
+      "component" : "welcome/Home" ,
+      "meta" : {
+        "icon" : "el-icon-house" ,
+        "intercept" : true ,
+        "noQuickTabs" : false ,
+        "noKeepAlive" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
     }
   ]
 } , {
@@ -75,8 +86,8 @@
   } ,
   "children" : [
     {
-      "path" : "/oneLevHome" ,
-      "name" : "oneLevHome" ,
+      "path" : "/bigHome" ,
+      "name" : "bigHome" ,
       "redirect" : {
         "name" : "home"
       } ,
@@ -108,10 +119,10 @@
             "role" : [ 5233 , 5232 , 5231 , 5230 ]
           }
         } , {
-          "path" : "/twoLevHome" ,
-          "name" : "twoLevHome" ,
+          "path" : "/embHome" ,
+          "name" : "embHome" ,
           "redirect" : {
-            "name" : "home"
+            "name" : "embHome"
           } ,
           "meta" : {
             "icon" : "el-icon-house" ,
@@ -244,11 +255,20 @@
         "intercept" : true ,
         "role" : [ 5233 ]
       }
+    } , {
+      "path" : "/dynamicCss" ,
+      "name" : "dynamicCss" ,
+      "component" : "aboutstyle/dynamiccss/DynamicCss" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 ]
+      }
     }
   ]
 } , {
-  "path" : "/systemManagement" ,
-  "name" : "systemManagement" ,
+  "path" : "/systemPermissions" ,
+  "name" : "systemPermissions" ,
   "component" : "welcome/Main" ,
   "meta" : {
     "icon" : "el-icon-sugar" ,
@@ -260,6 +280,15 @@
       "path" : "/menuManagement" ,
       "name" : "menuManagement" ,
       "component" : "admin/routemanagement/RouteManagement" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 ]
+      }
+    } , {
+      "path" : "/permissionsDemo" ,
+      "name" : "permissionsDemo" ,
+      "component" : "admin/permissionsdemo/PermissionsDemo" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

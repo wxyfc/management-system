@@ -58,9 +58,9 @@
                     button : {
                         value : "state" ,
                         display : this.buttonDisplay ,
-                        list : [ { text : "state:1" , type : "primary" , value : [ 1 , 2 ] } ,
-                            { text : "state:1,2" , type : "success" , value : [ 1 , 3 ] } ,
-                            { text : "state:1,3" , type : "warning" , value : [ 1 , 4 ] } ,
+                        list : [ { text : "state:1,2" , type : "primary" , value : [ 1 , 2 ] } ,
+                            { text : "state:1,3" , type : "success" , value : [ 1 , 3 ] } ,
+                            { text : "state:1,4" , type : "warning" , value : [ 1 , 4 ] } ,
                             { text : "state:2,3" , type : "danger" , value : [ 2 , 3 ] } ,
                             { text : "state:2,4" , type : "info" , value : [ 2 , 4 ] } ,
                             { text : "state:3,4" , type : "" , value : [ 3 , 4 ] } ]

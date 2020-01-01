@@ -243,7 +243,7 @@
   "meta" : {
     "icon" : "el-icon-sugar" ,
     "intercept" : true ,
-    "role" : [ 5233 ]
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
   } ,
   "children" : [
     {
@@ -253,7 +253,7 @@
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
-        "role" : [ 5233 ]
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
     } , {
       "path" : "/dynamicCss" ,
@@ -262,7 +262,7 @@
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
-        "role" : [ 5233 ]
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
     }
   ]
@@ -273,7 +273,7 @@
   "meta" : {
     "icon" : "el-icon-sugar" ,
     "intercept" : true ,
-    "role" : [ 5233 ]
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
   } ,
   "children" : [
     {
@@ -292,7 +292,7 @@
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
-        "role" : [ 5233 ]
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
     }
   ]

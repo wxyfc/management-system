@@ -1,5 +1,6 @@
 {
   "" : "" ,
+  "permissionDemo" : "以下按钮是关于v-permission权限控制的演示" ,
   "dynamicCss" : "动态CSS" ,
   "dynamicCssAddCss" : "在右侧文本框动态添加CSS" ,
   "recursiveMenu" : "递归菜单" ,

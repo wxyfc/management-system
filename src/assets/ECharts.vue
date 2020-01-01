@@ -1,10 +1,5 @@
 <template>
-    <div
-            class="shadow w100 h100"
-            v-bind:id="id"
-            :class="className"
-            :style="{height:height,width:width}"
-    ></div>
+    <div class="shadow w100 h100" v-bind:id="id" :class="className" :style="{height:height,width:width}"></div>
 </template>
 <script>
     export default {

@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import store from './store';
 
 Array.prototype.$max = function () {
     //数字数组里最大
@@ -182,12 +183,16 @@ Date.prototype.$format = function ( fmt ) {
 Vue.directive ( 'permission' , {
     inserted ( el , binding , vnode ) {
         let value = binding.value;
-        let roles = [ 1 , 5233 , 5232 , 5231 , 5230 ]
+        let role = store.getters.getUserInfo.userTestRole;
+        let roles = [ 1 ];
+        if ( role != undefined && !roles.includes ( role ) ) {
+            roles.push ( role )
+        }
         if ( Vue.prototype.$isTrue ( value ) ) {
             let hasPermission;
             if ( Vue.prototype.$type ( value ) == "[object Array]" ) {
-                hasPermission = value.some ( role => {
-                    return roles.includes ( role )
+                hasPermission = value.some ( r => {
+                    return roles.includes ( r )
                 } )
             } else {
                 hasPermission = roles.includes ( value );

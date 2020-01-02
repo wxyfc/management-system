@@ -28,6 +28,8 @@
             test () {
                 // window.location = encodeURI(this.location);
             }
+        } ,
+        mounted () {
         }
     };
 </script>

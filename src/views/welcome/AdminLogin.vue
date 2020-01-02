@@ -158,7 +158,7 @@
             // this.historicalAccount = getLocal ( "historicalAccount" );
             // if (this.$isTrue(userMemory)) {
             if ( false ) {
-                this.setOtherInfo ( userMemory.otherInfo );
+                // this.setOtherInfo ( userMemory.otherInfo );
             } else {
                 this.setWebConfig ();
             }
@@ -173,7 +173,6 @@
                 language : that.language
             } );
             setLocal ( "loginForm" , that.ruleForm );
-            // setLocal ( "historicalAccount" , that.historicalAccount );
         }
     };
 </script>

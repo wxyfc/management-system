@@ -13,6 +13,9 @@ let m = {
         } ,
         language () {
             return this.$store.getters.getLanguage;
+        } ,
+        briefInfo () {
+            return this.$store.getters.getBriefInfo;
         }
     } ,
     watch : {
@@ -62,6 +65,22 @@ let m = {
             this.$store.dispatch ( "upVuex" , {
                 mutations : "setUserInfo" ,
                 value : v
+            } );
+        } ,
+        setBriefInfo ( v ) {
+            //设置临时的信息
+            this.$store.dispatch ( "upVuex" , {
+                mutations : "setBriefInfo" ,
+                value : v
+            } );
+        } ,
+        deleteBriefInfo ( k ) {
+            //删除临时的信息
+            this.$store.dispatch ( "upVuex" , {
+                mutations : "deleteBriefInfo" ,
+                value : {
+                    key : k
+                }
             } );
         } ,
         post ( u , p , f , ts ) {

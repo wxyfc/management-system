@@ -1,5 +1,10 @@
 {
   "" : "" ,
+  "uploadFile" : "上传文件" ,
+  "fileTypeBad" : "文件类型不正确" ,
+  "imgExceSize" : "图片超过指定大小" ,
+  "uploadImg" : "上传图片" ,
+  "uploadTools" : "上传工具" ,
   "permissionDemo" : "以下按钮是关于v-permission权限控制的演示" ,
   "dynamicCss" : "动态CSS" ,
   "dynamicCssAddCss" : "在右侧文本框动态添加CSS" ,

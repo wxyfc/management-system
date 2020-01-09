@@ -30,6 +30,10 @@
     margin-left: 1vw;
 }
 
+.margin-auto-tb {
+    margin: auto;
+}
+
 .float-r {
     float: right;
 }
@@ -345,4 +349,12 @@ textarea.el-textarea__inner {
 .transparent {
     /*完全透明*/
     background: transparent;
+}
+
+.el-upload--picture-card,
+.el-upload-list--picture-card .el-upload-list__item {
+    /*上传图片显示的大小*/
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
 }

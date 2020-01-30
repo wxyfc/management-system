@@ -56,7 +56,7 @@
             imgSize : {
                 //每张图片上传的大小
                 type : Number ,
-                default : 2097152
+                default : 2048000
             }
         } ,
         watch : {
@@ -66,7 +66,11 @@
                 handler ( newv , oldv ) {
                     if ( newv.length > 0 ) {
                         this.fileList = newv;
-                        this.fileBase64List = newv;
+                        let fileBL = [];
+                        newv.some ( ( item , i ) => {
+                            fileBL.push ( item.url )
+                        } )
+                        this.fileBase64List = fileBL;
                     }
                 }
             } ,
@@ -96,13 +100,12 @@
                         that.$set ( file , "uid" , uid )
                         that.$set ( file , "url" , response )
                         //图片转换成base64
-                        if ( this.fileList.length < this.imgNum ) {
-                            this.fileList.push ( file );
-                            this.fileBase64List.push ( response );
-                        } else {
-                            this.fileList.splice ( this.UpNum - 1 , 1 , file );
-                            this.fileBase64List.splice ( this.UpNum - 1 , 1 , response );
+                        if ( this.fileList.length >= this.imgNum ) {
+                            this.fileList.splice ( 0 , 1 );
+                            this.fileBase64List.splice ( 0 , 1 );
                         }
+                        this.fileList.push ( file );
+                        this.fileBase64List.push ( response );
                     } );
                 }
                 return false

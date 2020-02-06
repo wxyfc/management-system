@@ -90,12 +90,22 @@
     display: inline-block;
 }
 
+.ellipsis-s1 {
+    /*多行文字超出省略  s1*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
 /* pointerEvents:none禁止点击 */
 .notLineFeed {
-    /* 不换行 */
+    /* 单行文字超出省略 */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    -o-text-overflow: ellipsis;
 }
 
 .h100 {
@@ -357,4 +367,32 @@ textarea.el-textarea__inner {
     width: 120px;
     height: 120px;
     line-height: 120px;
+}
+
+.el-upload-file-tag {
+    width: 200px;
+}
+
+/*.el-upload-file-tag:hover*/
+/*.el-icon-view {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.el-upload-file-tag:hover*/
+/*.el-icon-delete {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.el-upload-file-tag .el-icon-close,*/
+.el-upload-file-tag .el-icon-view,
+.el-upload-file-tag .el-icon-delete {
+    /*display: none;*/
+    font-size: 18px;
+}
+
+.el-upload-file-tag .el-icon-view:hover,
+.el-upload-file-tag .el-icon-delete:hover {
+    color: #409EFF;
+    border-radius: 10px;
+    background: rgba(64, 158, 255, 0.56);
 }

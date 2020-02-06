@@ -6,7 +6,7 @@
                 <el-form-item>
                     <!--默认上传-->
                     <span slot="label" class="emphasize">{{language.defaultUpload}}</span>
-                    <el-col class="normal" :span="24">{{language.defaultUploadTooltip}}</el-col>
+                    <el-col class="normal" :span="24">{{language.defaultUploadImgTooltip}}</el-col>
                     <UploadImgTool></UploadImgTool>
                 </el-form-item>
                 <el-form-item>
@@ -34,7 +34,6 @@
                                    ]"></UploadImgTool>
                 </el-form-item>
             </el-form>
-
         </el-col>
     </el-row>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <el-upload action="#" :file-list="fileList" multiple list-type="picture-card" :accept="acceptList" :before-upload="beforeUploadChange">
+        <el-upload action="#" :file-list="fileList" multiple list-type="picture-card" accept="image/*" :before-upload="beforeUploadChange">
             <i slot="default" class="el-icon-plus margin-auto-tb"></i>
             <div slot="file" slot-scope="{file}" class="h100 w100">
                 <img class="el-upload-list__item-thumbnail margin-auto-tb" :src="file.url" style="object-fit:contain;">
@@ -37,7 +37,7 @@
                 fileBase64List : [] ,
                 imgDialogShow : false ,
                 imgDialogIndex : 0 ,
-                acceptList : "image/jpg,image/jpeg,image/png"
+                acceptList : [ "jpg" , "jpeg" , "png" ]
             };
         } ,
         props : {
@@ -88,7 +88,9 @@
         methods : {
             beforeUploadChange ( file ) {
                 let that = this;
-                if ( this.acceptList.indexOf ( file.type ) == -1 ) {
+                let isTypeList = file.name.split ( "." );
+                let isType = isTypeList[ isTypeList.length - 1 ];
+                if ( this.acceptList.indexOf ( isType ) == -1 ) {
                     this.eleNotify ( `${file.name + this.language.fileTypeBad}` , 3 )
                 } else if ( file.size >= this.imgSize ) {
                     let sizeText = bytesToSize ( file.size )

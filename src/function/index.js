@@ -1,10 +1,14 @@
 import Vue from "vue";
 
-export function fileReader ( file ) {
+export function fileReader ( file , type ) {
     //异步加载文件
     return new Promise ( function ( resolve , reject ) {
         let reader = new FileReader ();
-        reader.readAsDataURL ( file );
+        if ( type == "File" ) {
+            reader.readAsText ( file , 'gb2312' ) // input.files[0]为第一个文件
+        } else {
+            reader.readAsDataURL ( file );
+        }
         reader.onload = e => {
             // return e.target.result;
             resolve ( e.target.result )

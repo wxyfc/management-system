@@ -13,7 +13,7 @@
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "test" ,
         components : {
-            RequestUtil : () => import("@/assets/RequestUtil")
+            RequestUtil : () => import("@/assets/RequestUtil") ,
         } ,
         data () {
             return {};
@@ -31,5 +31,6 @@
         } ,
         mounted () {
         }
-    };
+    }
+    ;
 </script>

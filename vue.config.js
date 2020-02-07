@@ -36,6 +36,7 @@ module.exports = {
             'vue-count-to' : 'CountTo' ,
             'vue-fragment' : 'Fragment' ,
             'mockjs' : 'Mock' ,
+            'vue-splitpane' : 'SplitPane' ,
         }
     } ,
     css : {

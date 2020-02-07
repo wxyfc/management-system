@@ -369,30 +369,39 @@ textarea.el-textarea__inner {
     line-height: 120px;
 }
 
+.el-upload-file {
+    width: 200px;
+}
+
 .el-upload-file-tag {
     width: 200px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
 }
 
 /*.el-upload-file-tag:hover*/
 /*.el-icon-view {*/
-    /*display: inline-block;*/
+/*display: inline-block;*/
 /*}*/
 
 /*.el-upload-file-tag:hover*/
 /*.el-icon-delete {*/
-    /*display: inline-block;*/
+/*display: inline-block;*/
 /*}*/
 
 /*.el-upload-file-tag .el-icon-close,*/
 .el-upload-file-tag .el-icon-view,
-.el-upload-file-tag .el-icon-delete {
+.el-upload-file-tag .el-icon-delete,
+.el-upload-file-tag .el-icon-download {
     /*display: none;*/
-    font-size: 18px;
 }
 
 .el-upload-file-tag .el-icon-view:hover,
-.el-upload-file-tag .el-icon-delete:hover {
+.el-upload-file-tag .el-icon-delete:hover,
+.el-upload-file-tag .el-icon-download:hover {
     color: #409EFF;
     border-radius: 10px;
+    padding: 2px;
     background: rgba(64, 158, 255, 0.56);
 }

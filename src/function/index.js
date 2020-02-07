@@ -4,8 +4,8 @@ export function fileReader ( file , type ) {
     //异步加载文件
     return new Promise ( function ( resolve , reject ) {
         let reader = new FileReader ();
-        if ( type == "File" ) {
-            reader.readAsText ( file , 'gb2312' ) // input.files[0]为第一个文件
+        if ( type != undefined ) {
+            reader.readAsText ( file , type )//如果传入第二个参数，代表读取文件内容，以怎样的格式解码内容，目前是乱码
         } else {
             reader.readAsDataURL ( file );
         }

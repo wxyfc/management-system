@@ -267,36 +267,6 @@
     }
   ]
 } , {
-  "path" : "/systemPermissions" ,
-  "name" : "systemPermissions" ,
-  "component" : "welcome/Main" ,
-  "meta" : {
-    "icon" : "el-icon-sugar" ,
-    "intercept" : true ,
-    "role" : [ 5233 , 5232 , 5231 , 5230 ]
-  } ,
-  "children" : [
-    {
-      "path" : "/menuManagement" ,
-      "name" : "menuManagement" ,
-      "component" : "admin/routemanagement/RouteManagement" ,
-      "meta" : {
-        "icon" : "el-icon-sugar" ,
-        "intercept" : true ,
-        "role" : [ 5233 ]
-      }
-    } , {
-      "path" : "/permissionsDemo" ,
-      "name" : "permissionsDemo" ,
-      "component" : "admin/permissionsdemo/PermissionsDemo" ,
-      "meta" : {
-        "icon" : "el-icon-sugar" ,
-        "intercept" : true ,
-        "role" : [ 5233 , 5232 , 5231 , 5230 ]
-      }
-    }
-  ]
-} , {
   "path" : "/uploadTools" ,
   "name" : "uploadTools" ,
   "component" : "welcome/Main" ,
@@ -319,6 +289,57 @@
       "path" : "/uploadFile" ,
       "name" : "uploadFile" ,
       "component" : "uploadtools/uploadfile/UploadFile" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/selfAdaption" ,
+  "name" : "selfAdaption" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/selfAdaptionEcherts" ,
+      "name" : "selfAdaptionEcherts" ,
+      "component" : "selfadaption/selfadaptionecherts/SelfAdaptionEcherts" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/systemPermissions" ,
+  "name" : "systemPermissions" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/menuManagement" ,
+      "name" : "menuManagement" ,
+      "component" : "admin/routemanagement/RouteManagement" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 ]
+      }
+    } , {
+      "path" : "/permissionsDemo" ,
+      "name" : "permissionsDemo" ,
+      "component" : "admin/permissionsdemo/PermissionsDemo" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

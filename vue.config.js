@@ -37,6 +37,7 @@ module.exports = {
             'vue-fragment' : 'Fragment' ,
             'mockjs' : 'Mock' ,
             'vue-splitpane' : 'SplitPane' ,
+            "vue-amap" : "VueAMap" ,
         }
     } ,
     css : {

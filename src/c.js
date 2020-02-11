@@ -1,7 +1,7 @@
 import Vue from 'vue'
-Vue.component("mt", () => import("@/assets/Title.vue"))
-Vue.component("mdb", () => import("@/assets/MyDisabledButton.vue"))
-Vue.component("mi", () => import("@/assets/MyTooltipIcon.vue"))
+Vue.component("mt", () => import("@/assets/Title"))
+Vue.component("mdb", () => import("@/assets/MyDisabledButton"))
+Vue.component("mi", () => import("@/assets/MyTooltipIcon"))
 
 import Fragment from "vue-fragment"
 Vue.use(Fragment.Plugin)

@@ -1,7 +1,11 @@
 {
   "" : "" ,
+  "New" : "新的文件" ,
+  "aMap" : "高德地图" ,
+  "aboutmap" : "关于地图" ,
   "selfAdaption" : "自适应" ,
   "selfAdaptionEcherts" : "自适应图表" ,
+  "selfAdaptionEchertsTooltip" : "自适应图表主要针对电脑端后台管理系统进行屏幕变化自适应重绘。" ,
   "docAndDocx" : "word文档有doc和docx，由于拦截是按照后缀名拦截的，所以部分文件拦截出现问题增加拦截的类型即可，doc和docx只是举个增加的例子。" ,
   "updateAcceptInterceptType" : "更改过滤和拦截的类型" ,
   "updateAcceptInterceptTypeTooltip" : "过滤和拦截的类型是一致的，只是是否开启拦截而已。" ,

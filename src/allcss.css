@@ -10,8 +10,18 @@
     text-align: center;
 }
 
+.heicnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .margin1vw {
     margin: 1vw;
+}
+
+.padding1vw {
+    padding: 1vw;
 }
 
 .margin1vw-t {

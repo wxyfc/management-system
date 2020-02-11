@@ -26,7 +26,7 @@
                     "display: flex; /*换成block试试*/ \n" +
                     "/*width: 200px;*/ \n" +
                     "/*height: 200px;*/ \n" +
-                    "text-align: center; \n" +
+                    "/*text-align: center;*/ \n" +
                     "color: rgb(15, 119, 255); \n" +
                     "flex-direction: column; /*元素的排列方向为垂直*/ \n" +
                     "justify-content: center; /*水平居中对齐*/ \n" +

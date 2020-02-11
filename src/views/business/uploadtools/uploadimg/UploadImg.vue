@@ -49,7 +49,7 @@
             };
         } ,
         components : {
-            UploadImgTool : () => import('@/assets/UploadImgTool.vue')
+            UploadImgTool : () => import('@/assets/UploadImgTool')
         } ,
     };
 </script>

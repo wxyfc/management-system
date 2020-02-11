@@ -1,6 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
+        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="margin1vw"></el-col>
     </el-row>
 </template>
 

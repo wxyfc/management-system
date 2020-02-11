@@ -64,10 +64,10 @@
             }
         } ,
         components : {
-            HelloHeader : () => import("@/views/framework/HelloHeader.vue") ,
-            VertRollS : () => import("@/assets/VertRollS.vue") ,
-            BriefSee : () => import("@/assets/BriefSee.vue") ,
-            ECharts : () => import("@/assets/ECharts.vue")
+            HelloHeader : () => import("@/views/framework/HelloHeader") ,
+            VertRollS : () => import("@/assets/VertRollS") ,
+            BriefSee : () => import("@/assets/BriefSee") ,
+            ECharts : () => import("@/assets/ECharts")
         } ,
         methods : {
             clickECharts ( p ) {

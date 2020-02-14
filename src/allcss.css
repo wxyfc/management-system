@@ -415,3 +415,25 @@ textarea.el-textarea__inner {
     padding: 2px;
     background: rgba(64, 158, 255, 0.56);
 }
+
+.el-drawer__body {
+    overflow: auto;
+}
+
+/*.el-amap-search-box {*/
+/*position: relative;*/
+/*}*/
+
+/*.el-vue-search-box-container {*/
+/*height: 40px;*/
+/*width: 50%;*/
+/*position: absolute;*/
+/*left: 0px;*/
+/*top: 0px;*/
+/*}*/
+.el-amap-tag-address {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

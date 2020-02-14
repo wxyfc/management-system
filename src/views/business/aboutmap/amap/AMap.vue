@@ -2,8 +2,7 @@
     <el-row>
         <mt>{{language[$options.name]}}</mt>
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" style="height: 80%;" class="padding1vw">
-            <GMap :mPosition="mPosition" @mSearchResult="mSearchResult" :mMapClick="mMapClick"
-            ></GMap>
+            <GMap :mPosition="mPosition" @mSearchResult="mSearchResult" :mMapClick="mMapClick"></GMap>
         </el-col>
     </el-row>
 </template>

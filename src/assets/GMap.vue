@@ -1,10 +1,7 @@
 <template>
     <fragment>
-        <el-col :xs="24" :sm="18" :md="16" :lg="14" :xl="12">
-            <el-amap-search-box v-if="search" style="height:40px;width:100%;" :search-option="mSearchOption" :on-search-result="onSearchResult"></el-amap-search-box>
-        </el-col>
-        <br>
-        <el-col :class="mClass">
+        <el-col :class="mClass" style="position: relative;">
+            <el-amap-search-box v-if="search" :search-option="mSearchOption" :on-search-result="onSearchResult"></el-amap-search-box>
             <el-amap vid="amap-vue" :plugin="plugin" :center="center" :zoom="zoom" :events="events">
                 <el-amap-marker
                         vid="component-marker"
@@ -32,21 +29,19 @@
                         :title="address"
                 ></el-amap-marker>
             </el-amap>
-        </el-col>
-        <el-col>
-            <el-tag v-if="address">{{address}}</el-tag>
+            <el-tag v-if="address" class="el-amap-tag-address">{{address}}</el-tag>
         </el-col>
     </fragment>
 </template>
 
 <script>
-    import { GetDistance } from "@/function";
-    import AMap from "vue-amap";
+    import { GetDistance , $addCSS } from "@/function";
+    import VueAMap from "vue-amap";
 
     export default {
         name : "MyMap" ,
         components : {
-            AMap : AMap.initAMapApiLoader ( {
+            VueAMap : VueAMap.initAMapApiLoader ( {
                 // 高德key
                 key : '1781c47c1cd7be7028b0a1706715cf70' ,
                 // 插件集合 （插件按需引入）
@@ -108,7 +103,8 @@
                     }
                 } ,
                 address : "" ,
-                poisList : []
+                poisList : [] ,
+                cssText : "height: 40px;width: 50%;position: absolute;left: 0px;top: 0px;"
             };
         } ,
         props : {
@@ -124,7 +120,7 @@
             mClass : {
                 //样式地图大小
                 type : String ,
-                default : "w100 h100"
+                default : "w100 h100 "
             } ,
             mPosition : {
                 //地图循环标注的点，在地图处理显示的循环点 蓝色默认点
@@ -265,6 +261,7 @@
             }
         } ,
         mounted () {
+            $addCSS ( `.el-vue-search-box-container{${this.cssText}}` )
         } ,
     };
 </script>

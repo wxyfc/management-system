@@ -104,7 +104,7 @@
                 } ,
                 address : "" ,
                 poisList : [] ,
-                cssText : "height: 40px;width: 50%;position: absolute;left: 0px;top: 0px;"
+                cssText : "height: 40px;width: 80%;position: absolute;left: 0px;top: 0px;"
             };
         } ,
         props : {
@@ -135,7 +135,12 @@
             mSearchOption : {
                 //地图所显示的城市
                 type : Object ,
-                default : null
+                default : () => {
+                    return {
+                        city : '上海' ,
+                        citylimit : true
+                    };
+                }
             } ,
             search : {
                 //是否开启查询

@@ -52,13 +52,13 @@
                     if ( this.homeHand ) {
                         return "44.4%";
                     } else {
-                        return "46.9%";
+                        return "46.8%";
                     }
                 } else {
                     if ( this.homeHand ) {
                         return "47.4%";
                     } else {
-                        return "49.9%";
+                        return "49.8%";
                     }
                 }
             }

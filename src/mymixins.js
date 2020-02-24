@@ -67,6 +67,16 @@ let m = {
                 value : v
             } );
         } ,
+        lastUserInfo ( v ) {
+            if ( v == undefined ) {
+                v = {};
+            }
+            //设置用户的信息
+            this.$store.dispatch ( "upVuex" , {
+                mutations : "lastUserInfo" ,
+                value : v
+            } );
+        } ,
         setBriefInfo ( v ) {
             //设置临时的信息
             this.$store.dispatch ( "upVuex" , {

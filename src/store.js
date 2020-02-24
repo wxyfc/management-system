@@ -30,11 +30,27 @@ export default new Vuex.Store ( {
             for ( let key in value ) {
                 Vue.set ( state.userInfo , key , value[ key ] );
             }
+            // let time = new Date ();
+            // Vue.set ( state.userInfo , "lastTime" , {
+            //     date : time.toLocaleString () ,
+            //     second : time.getTime ()
+            // } );
+        } ,
+        lastUserInfo ( state , value ) {
             let time = new Date ();
-            Vue.set ( state.userInfo , "lastTime" , {
-                date : time.toLocaleString () ,
-                second : time.getTime ()
-            } );
+            let date;
+            if ( value.hasOwnProperty ( "date" ) ) {
+                date = value.date;
+            } else {
+                date = time.toLocaleString ();
+            }
+            let second;
+            if ( value.hasOwnProperty ( "second" ) ) {
+                second = value.second;
+            } else {
+                second = time.getTime ();
+            }
+            Vue.set ( state.userInfo , "lastTime" , { date , second } );
         } ,
         deleteUserInfo ( state , value ) {
             Vue.delete ( state.userInfo , value.key );
@@ -43,11 +59,11 @@ export default new Vuex.Store ( {
             for ( let key in value ) {
                 Vue.set ( state.otherInfo , key , value[ key ] );
             }
-            let time = new Date ();
-            Vue.set ( state.otherInfo , "lastTime" , {
-                date : time.toLocaleString () ,
-                second : time.getTime ()
-            } );
+            // let time = new Date ();
+            // Vue.set ( state.otherInfo , "lastTime" , {
+            //     date : time.toLocaleString () ,
+            //     second : time.getTime ()
+            // } );
         } ,
         deleteOtherInfo ( state , value ) {
             Vue.delete ( state.otherInfo , value.key );
@@ -56,11 +72,11 @@ export default new Vuex.Store ( {
             for ( let key in value ) {
                 Vue.set ( state.language , key , value[ key ] );
             }
-            let time = new Date ();
-            Vue.set ( state.language , "lastTime" , {
-                date : time.toLocaleString () ,
-                second : time.getTime ()
-            } );
+            // let time = new Date ();
+            // Vue.set ( state.language , "lastTime" , {
+            //     date : time.toLocaleString () ,
+            //     second : time.getTime ()
+            // } );
         } ,
         setBriefInfo ( state , value ) { //设置其他信息
             for ( let key in value ) {

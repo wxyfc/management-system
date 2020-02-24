@@ -17,10 +17,10 @@
                     <MainHeader></MainHeader>
                 </el-header>
                 <!--5%-->
-                <el-header style="padding:0.2%;height:4%;">
+                <el-header style="padding:0.4%;max-height:4%;height:auto;">
                     <MainTag></MainTag>
                 </el-header>
-                <el-main style="padding:0.2%;height: 90%;">
+                <el-main style="padding:0.4%;height: 90%;">
                     <MainApp></MainApp>
                 </el-main>
             </el-container>

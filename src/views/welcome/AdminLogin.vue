@@ -147,6 +147,7 @@
                             // projectId: that.$isTrue(res.Expand) ? res.Expand.Id : null,
                             // cooperativePartner: that.language.ABC
                         } );
+                        that.lastUserInfo ()
                         that.$router.replace ( { name : "test" } );
                     }
                 } );

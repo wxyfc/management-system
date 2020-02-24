@@ -1,5 +1,10 @@
 import Vue from "vue";
 
+export function getNumberOfDays ( date1 , date2 ) {//获得天数
+    //date1：开始日期，date2结束日期  时间戳相减，然后除以天数
+    return Math.ceil ( ( Date.parse ( new Date ( date2 ) ) - Date.parse ( new Date ( date1 ) ) ) / ( 1000 * 60 * 60 * 24 ) )
+};
+
 export function fileReader ( file , type ) {
     //异步加载文件
     return new Promise ( function ( resolve , reject ) {

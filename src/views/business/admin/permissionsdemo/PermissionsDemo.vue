@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div class="margin1vw alncnt" style="height: 70%;">
+        <div class="padding1vw alncnt" style="height: 70%;">
             <el-col class="normal" :xs="24" :sm="20" :md="17" :lg="15" :xl="13" style="height: 10%;">{{language.permissionDemo}}</el-col>
             <el-col :xs="24" :sm="20" :md="17" :lg="15" :xl="13" style="height: 20%;">
                 <el-radio-group v-model="testRole" :fill="colors[testRole]">

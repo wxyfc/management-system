@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div style="height: 1%;" class="margin1vw">
+        <div style="height: 1%;" class="padding1vw">
             <el-col class="normal" :span="24">{{language.selfAdaptionEchertsTooltip}}</el-col>
         </div>
         <el-col :span="24" style="height: 91%;">
@@ -52,7 +52,7 @@
         } ,
         components : {
             SplitPane : () => import("vue-splitpane") ,
-            ECharts : () => import("@/assets/ECharts.vue")
+            ECharts : () => import("@/assets/ECharts")
             // Split : () => import("@/assets/SplitPanel")  //需要less的分割面板
         } ,
         

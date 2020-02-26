@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div style="height: 30%;" class="margin1vw alncnt">
+        <div style="height: 30%;" class="padding1vw alncnt">
             <el-col :span="24"> {{ language.iconUnifiedStyle }}</el-col>
             <el-col :xs="4" :sm="3" :md="2" :lg="2" :xl="1" v-for="(icon,i) in iconList" class="margin1vw-t" :key="i">
                 <mi :icon="icon" :tooltip="icon" @click="clickIcon" :unified="true"></mi>

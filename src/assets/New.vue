@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="margin1vw"></el-col>
+        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="padding1vw"></el-col>
     </el-row>
 </template>
 
@@ -17,8 +17,8 @@
             };
         } ,
         components : {
-            // test: resolve => {require(['@/test/test.vue'], resolve)},//懒加载
-            //test: () => import('@/test/test.vue')
+            // test: resolve => {require(['@/test/test'], resolve)},//懒加载
+            //test: () => import('@/test/test')
         } ,
         props : {
             // test: {

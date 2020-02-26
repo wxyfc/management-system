@@ -1,5 +1,6 @@
 let illegalURL = "http://localhost:5233/";//全局跨域地址
 let weatherURL = "https://www.tianqiapi.com/api/"//天气预报
+let musicURL = "http://musicapi.leanapp.cn"//天气预报
 let path = require ( 'path' )
 
 function resolve ( dir ) {
@@ -38,6 +39,7 @@ module.exports = {
             'mockjs' : 'Mock' ,
             'vue-splitpane' : 'SplitPane' ,
             "vue-amap" : "VueAMap" ,
+            "vue-aplayer" : "VueAPlayer" ,
         }
     } ,
     css : {
@@ -82,6 +84,14 @@ module.exports = {
                 secure : false ,
                 pathRewrite : {
                     '^/weather' : ''
+                }
+            } ,
+            "/musicapi" : {
+                target : musicURL ,
+                changeOrigin : true ,
+                secure : false ,
+                pathRewrite : {
+                    '^/musicapi' : ''
                 }
             }
         }

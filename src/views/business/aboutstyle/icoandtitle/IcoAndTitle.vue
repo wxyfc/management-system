@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div style="height: 80%;" class="margin1vw">
+        <div style="height: 80%;" class="padding1vw">
             <el-col class="normal" :span="24">{{language.clickBottomSetIcoTitle}}</el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t h100">
                 <el-col :span="6" v-for="(item,i) in icoT" :key="i">

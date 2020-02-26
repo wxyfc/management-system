@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <el-col :xs="24" :sm="20" :md="16" :lg="14" :xl="12" style="height: 80%;" class="margin1vw">
+        <el-col :xs="24" :sm="20" :md="16" :lg="14" :xl="12" style="height: 80%;" class="padding1vw">
             <el-form label-width="20%">
                 <el-form-item>
                     <!--默认上传-->

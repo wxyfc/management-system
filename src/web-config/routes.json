@@ -339,6 +339,27 @@
     }
   ]
 } , {
+  "path" : "/aboutAudioFrequency" ,
+  "name" : "aboutAudioFrequency" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/musicPlayer" ,
+      "name" : "musicPlayer" ,
+      "component" : "aboutaudiofrequency/musicplayer/MusicPlayer" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
   "path" : "/systemPermissions" ,
   "name" : "systemPermissions" ,
   "component" : "welcome/Main" ,

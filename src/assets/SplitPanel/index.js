@@ -1,2 +1,2 @@
-import ASplitPanel from './index.vue';
+import ASplitPanel from './index';
 export default ASplitPanel;

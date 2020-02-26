@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div class="margin1vw" style="height:80%;">
+        <div class="padding1vw" style="height:80%;">
             <UiPageTable
                     ref="newTable"
                     :tableData="dataList"

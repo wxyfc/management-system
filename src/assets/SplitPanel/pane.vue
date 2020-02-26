@@ -23,7 +23,7 @@
 
 <script>
 import { oneOf, on, off } from './tools';
-import Trigger from './trigger.vue';
+import Trigger from './trigger';
 export default {
   name: 'SplitPane',
   components: {

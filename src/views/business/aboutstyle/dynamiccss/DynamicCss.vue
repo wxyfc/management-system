@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div style="height: 80%;" class="margin1vw">
+        <div style="height: 80%;" class="padding1vw">
             <el-col class="normal" :span="24">{{language.dynamicCssAddCss}}</el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t h100">
                 <div class="h100 w100 dynamicCssDiv"><span>test</span><span>css</span></div>

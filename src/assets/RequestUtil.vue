@@ -1,6 +1,6 @@
 <template>
   <span class="alnlft">
-    <el-row class="margin1vw">
+    <el-row class="padding1vw">
       <el-col :xs="24" :sm="12" :md="12" :lg="14" :xl="16" class="margin1vw-t">
         {{language.requestAddress}}：
         <el-autocomplete v-model="inputUrl" :placeholder="language.requestAddress" class="width80" :fetch-suggestions="querySearch" @select="handleSelect"></el-autocomplete>
@@ -16,7 +16,7 @@
         <mdb icon="el-icon-search" type="primary" :disabled=" inputUrl == '' " @click="Request" :long="true">{{language.sureRequest}}</mdb>
       </el-col>
     </el-row>
-    <el-row v-for="(v,k) in testData" :key="k" class="margin1vw">
+    <el-row v-for="(v,k) in testData" :key="k" class="padding1vw">
       <el-col :xs="12" :sm="6" :md="6" :lg="7" :xl="8" class="margin1vw-t">key：{{k}}</el-col>
       <el-col :xs="12" :sm="6" :md="6" :lg="7" :xl="8" class="margin1vw-t">value：{{v}}</el-col>
       <el-col :xs="12" :sm="6" :md="6" :lg="5" :xl="4" class="margin1vw-t">
@@ -26,7 +26,7 @@
         <mi icon="el-icon-delete" :tooltip="language.delete" @click="deleData(k)"></mi>
       </el-col>
     </el-row>
-    <el-row class="margin1vw">
+    <el-row class="padding1vw">
       <el-col :xs="12" :sm="6" :md="6" :lg="7" :xl="8" class="margin1vw-t">
         key：
         <el-input v-model="inputKey" class="width80" placeholder="key"></el-input>

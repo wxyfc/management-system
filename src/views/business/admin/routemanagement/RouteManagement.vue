@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="margin1vw">
+        <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="padding1vw">
             <el-tree ref="menuManagementTree" :data="treeData" node-key="name" @check="treeCheckFun" :expand-on-click-node="false"
                      default-expand-all show-checkbox check-strictly>
                 <div class="custom-tree-node" slot-scope="{ node, data }">

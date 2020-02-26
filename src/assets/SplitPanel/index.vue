@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import SplitPane from './pane.vue'
-import Icons from './trigger.vue'
+import SplitPane from './pane'
+import Icons from './trigger'
 export default {
   name: 'split_pane_page',
   components: {

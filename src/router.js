@@ -16,7 +16,7 @@ let router = [
         path : '/login' ,
         name : 'login' ,
         replace : true ,
-        component : () => import('@/views/welcome/AdminLogin.vue') ,
+        component : () => import('@/views/welcome/AdminLogin') ,
         meta : {
             intercept : false ,
             noQuickTabs : true ,
@@ -35,7 +35,7 @@ let router = [
         path : '/404' ,
         name : '404' ,
         replace : true ,
-        component : () => import('@/views/welcome/404.vue') ,
+        component : () => import('@/views/welcome/404') ,
         meta : {
             intercept : false ,
             noQuickTabs : true ,
@@ -45,7 +45,7 @@ let router = [
         path : '/ready' ,
         name : 'ready' ,
         replace : true ,
-        component : () => import('@/views/welcome/Ready.vue') ,
+        component : () => import('@/views/welcome/Ready') ,
         meta : {
             intercept : true ,
             noQuickTabs : true ,

@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <div class="margin1vw alncnt" style="height:80%;">
+        <div class="padding1vw alncnt" style="height:80%;">
             <RequestUtil></RequestUtil>
             <mdb @click="exc">{{ language.excelExportTest }}</mdb>
         </div>

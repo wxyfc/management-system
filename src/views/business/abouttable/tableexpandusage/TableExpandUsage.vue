@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <el-row class="margin1vw alnrit" style="height:5%;">
+        <el-row class="padding1vw alnrit" style="height:5%;">
             <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
                 {{ language.updataExpandItem }}：
                 <el-radio-group v-model="addDataConfigItemType">
@@ -10,7 +10,7 @@
                 </el-radio-group>
             </el-col>
         </el-row>
-        <el-row style="height:80%;" class="margin1vw">
+        <el-row style="height:80%;" class="padding1vw">
             <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t h100">
                 <UiPageTable
                         ref="tableExpandUsage"

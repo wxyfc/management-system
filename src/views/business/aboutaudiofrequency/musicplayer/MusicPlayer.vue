@@ -4,14 +4,67 @@
         <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" class="padding1vw">
             <el-form label-width="50%">
                 <el-form-item>
-                    <!--文字提示按钮-->
-                    <span slot="label" class="emphasize">{{language.fontTooltip}}</span>
-                    <mdb :tooltip="language.fontTooltip" :disabledTime="0">{{ language.fontTooltip }}</mdb>
+                    <!--显示歌词-->
+                    <span slot="label" class="emphasize">{{language.showLrc}}</span>
+                    <el-switch v-model="showLrc"></el-switch>
+                </el-form-item>
+                <el-form-item>
+                    <!--自动播放-->
+                    <span slot="label" class="emphasize">{{language.autoplay}}</span>
+                    <el-switch v-model="autoplay"></el-switch>
+                </el-form-item>
+                <!--<el-form-item>-->
+                <!--&lt;!&ndash;控制按钮&ndash;&gt;-->
+                <!--<span slot="label" class="emphasize">{{language.controlsButton}}</span>-->
+                <!--<el-switch v-model="controlsButton"></el-switch>-->
+                <!--</el-form-item>-->
+                <el-form-item>
+                    <!--静音-->
+                    <span slot="label" class="emphasize">{{language.muted}}</span>
+                    <el-switch v-model="muted"></el-switch>
+                </el-form-item>
+                <el-form-item>
+                    <!--迷你模式-->
+                    <span slot="label" class="emphasize">{{language.miniMode}}</span>
+                    <el-switch v-model="miniMode"></el-switch>
+                </el-form-item>
+                <el-form-item>
+                    <!--浮动模式-->
+                    <span slot="label" class="emphasize">{{language.floatMode}}</span>
+                    <el-switch v-model="floatMode"></el-switch>
+                </el-form-item>
+                <el-form-item>
+                    <!--随机播放-->
+                    <span slot="label" class="emphasize">{{language.shufflePlayer}}</span>
+                    <el-switch v-model="shufflePlayer"></el-switch>
+                </el-form-item>
+                <!--<el-form-item>-->
+                <!--&lt;!&ndash;列表折叠&ndash;&gt;-->
+                <!--<span slot="label" class="emphasize">{{language.listFolded}}</span>-->
+                <!--<el-switch v-model="listFolded"></el-switch>-->
+                <!--</el-form-item>-->
+                <el-form-item>
+                    <!--播放模式-->
+                    <span slot="label" class="emphasize">{{language.playerMode}}</span>
+
+                    <el-radio-group v-model="playerMode">
+                        <el-radio-button v-for="(item,i) in playerModeList" :label="item.value" :key="i">
+                            <!--<i :class="item.icon" class="largeTitle"></i>-->
+                            {{item.label}}
+                        </el-radio-button>
+                    </el-radio-group>
+                </el-form-item>
+                <el-form-item>
+                    <!--播放列表的最大高度-->
+                    <span slot="label" class="emphasize">{{language.listMaxHeight}}</span>
+                    <el-slider v-model="listMaxHeight" class="width50" :min="100" :max="200" :step="10"></el-slider>
                 </el-form-item>
             </el-form>
         </el-col>
         <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" class="padding1vw">
-            <AMusicPlayer :list="list"></AMusicPlayer>
+            <AMusicPlayer :showLrc="showLrc" :autoplay="autoplay" :shuffle="shufflePlayer"
+                          :muted="muted" :mini="miniMode" :float="floatMode" :repeat="playerMode"
+                          :listMaxHeight="listMaxHeight+'px'" :list="list" :music="list[2]"></AMusicPlayer>
         </el-col>
     </el-row>
 </template>
@@ -22,24 +75,39 @@
         name : "musicPlayer" ,
         data () {
             return {
+                showLrc : true ,
+                autoplay : true ,
+                // controlsButton : false ,
+                muted : false ,
+                miniMode : false ,
+                floatMode : false ,
+                shufflePlayer : false ,
+                // listFolded : false ,
+                playerMode : "repeat-all" ,
+                //播放模式，repeat-one:循环单曲 repeat-all:循环所有 no-repeat:不循环 music:当前 list:列表 none:无
+                playerModeList : [
+                    { label : "循环单曲" , value : "repeat-one" } ,
+                    { label : "循环所有" , value : "repeat-all" } ,
+                    { label : "不循环" , value : "no-repeat" } ] ,
+                listMaxHeight : 100 ,
                 list : [
                     {
-                        src : "http://m10.music.126.net/20200226224028/0d573cc76a1d0be8294f8ac772a04231/ymusic/560f/075e/535f/ae15cebedc04c39f79f6d5ac577f2977.mp3" ,//    音乐源
+                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E5%86%AC%E7%9C%A0.mp3" ,//    音乐源
                         title : "冬眠" ,//    音乐标题
                         artist : "司南" ,//    艺术家
                         pic : "http://p1.music.126.net/4KDBaQXnQywQovmqvjx-8Q==/109951164444131697.jpg" ,//   封面图片
                     } , {
-                        src : "http://m10.music.126.net/20200226224334/2b63b03b2ebcf72b9469e37baf0f3690/ymusic/0759/030f/540b/039ace5c004ebd382de4ca163145cf9b.mp3" ,//    音乐源
-                        title : "大眠 (完整版)" ,//    音乐标题
+                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E5%A4%A7%E7%9C%A0.mp3" ,//    音乐源
+                        title : "大眠" ,//    音乐标题
                         artist : "小乐哥" ,//    艺术家
                         pic : "http://p2.music.126.net/zgDvTPDSYKjQUjkV8sQUOA==/109951164605092552.jpg" ,//   封面图片
                     } , {
-                        src : "http://m10.music.126.net/20200226215643/10e5f88aa12c821ba68bb865d93dbbc1/ymusic/0459/045c/520c/330c359473365e50a368ef0d43bc612f.mp3" ,//    音乐源
+                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
                         title : "世间美好与你环环相扣" ,//    音乐标题
                         artist : "柏松" ,//    艺术家
                         pic : "http://p1.music.126.net/DK1_4sP_339o5rowMdPXdw==/109951164071024476.jpg" ,//   封面图片
                     } , {
-                        src : "http://m10.music.126.net/20200226224656/a3a8ee919e542d1da3bcff1886745dab/ymusic/560e/000f/020e/ad379bdaee7e29190c575de9db396d0e.mp3" ,//    音乐源
+                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E8%BF%99%E5%B0%B1%E6%98%AF%E7%88%B1%E5%90%97.mp3" ,//    音乐源
                         title : "这就是爱吗" ,//    音乐标题
                         artist : "十豆彡" ,//    艺术家
                         pic : "http://p1.music.126.net/JgYOF-3unsM09TGhP5w6Ow==/109951164581280547.jpg" ,//   封面图片

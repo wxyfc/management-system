@@ -28,7 +28,7 @@
                 default : false
             } ,
             controls : {
-                //控制按钮
+                //显示原生 audio 元素
                 type : Boolean ,
                 default : true
             } ,
@@ -68,7 +68,7 @@
                 default : "pic" //颜色值会改变进度条 pic则从背景图提取颜色
             } ,
             repeat : {
-                //播放模式，repeat-one:重复一次 repeat-all:重复所有 no-repeat:不重复 music:当前 list:列表 none:无
+                //播放模式，repeat-one:循环单曲 repeat-all:循环所有 no-repeat:不循环 music:当前 list:列表 none:无
                 type : String ,
                 default : "repeat-all"
             } ,
@@ -87,11 +87,11 @@
                 type : Object ,
                 default : () => {
                     return {
-                        src : "http://m10.music.126.net/20200226215643/10e5f88aa12c821ba68bb865d93dbbc1/ymusic/0459/045c/520c/330c359473365e50a368ef0d43bc612f.mp3" ,//    音乐源
+                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
                         title : "世间美好与你环环相扣" ,//    音乐标题
                         artist : "柏松" ,//    艺术家
                         pic : "http://p1.music.126.net/DK1_4sP_339o5rowMdPXdw==/109951164071024476.jpg" ,//   封面图片
-                        lrc : "暂无歌词" ,//   歌词文件的url
+                        // lrc : "暂无歌词" ,//   歌词文件的url
                         // theme : "#e198b4" ,//    主题颜色
                     };
                 }
@@ -103,12 +103,6 @@
                 }
             }
         } ,
-        methods : {} ,
-        mounted () {
-        } ,
-        beforeDestroy () {
-        } ,
-
     };
 </script>
 <style scoped>

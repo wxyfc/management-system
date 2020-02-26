@@ -40,7 +40,10 @@
             // test: {
             //   deep: true,
             //   immediate: true,
-            //   handler(newv, oldv) {}
+            //   handler(newv, oldv) {
+            // this.$nextTick();
+            // this.$forceUpdate();
+            // }
             // }
         } ,
         methods : {

@@ -64,7 +64,7 @@
                     <template slot-scope="scope">
                         <el-form class="w100" inline label-width="40%">
                             <fragment v-for="(item,index) in handlerDataConfig.expand" :key="index">
-                                <el-form-item style="width:32%">
+                                <el-form-item style="width:31%">
                   <span
                           slot="label"
                           :class="item.class ? item.class: 'tableClass' "

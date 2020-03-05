@@ -432,6 +432,7 @@ textarea.el-textarea__inner {
 /*top: 0px;*/
 /*}*/
 .el-amap-tag-address {
+    /*高德地图显示地图的tag*/
     position: absolute;
     bottom: 0px;
     left: 50%;

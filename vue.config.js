@@ -40,6 +40,7 @@ module.exports = {
             'vue-splitpane' : 'SplitPane' ,
             "vue-amap" : "VueAMap" ,
             "vue-aplayer" : "VueAPlayer" ,
+            "vue-video-player" : "VueVideoPlayer" ,
         }
     } ,
     css : {

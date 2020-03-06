@@ -18,7 +18,7 @@
         } ,
         props : {
             showLrc : {
-                //显示歌词
+                //显示歌词                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
                 type : Boolean ,
                 default : true
             } ,

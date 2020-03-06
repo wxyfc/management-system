@@ -13,7 +13,7 @@
                 YouAreSmart : true ,
                 KickOutInterval : null ,
                 KickOutTime : 0 ,
-                KickOutNum : 0.001 * 60 * 60 * 1000 * 24
+                KickOutNum : 1 * 60 * 60 * 1000 * 24
             };
         } ,
         methods : {

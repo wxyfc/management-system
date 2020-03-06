@@ -1,13 +1,13 @@
 <template>
     <fragment>
         <el-col :class="mClass" style="position: relative;">
-            <el-amap-search-box v-if="search" :search-option="mSearchOption" :on-search-result="onSearchResult"></el-amap-search-box>
+            <el-amap-search-box v-if="search" :search-option="hSearchOption" :on-search-result="onSearchResult"></el-amap-search-box>
             <el-amap vid="amap-vue" :plugin="plugin" :center="center" :zoom="zoom" :events="events">
                 <el-amap-marker
                         vid="component-marker"
                         v-if="gPosition[0]"
                         v-for="(item,index) in gPosition"
-                        :key="(index+index+164)*index+46548"
+                        :key="(index*index+1)*index+999"
                         :position="item.position"
                         :animation="item.animation"
                         :content="item.content"
@@ -51,6 +51,7 @@
         data () {
             const that = this;
             return {
+                hSearchOption : {} ,
                 center : [ 121.607776 , 31.239684 ] ,
                 zoom : 18 , //级别
                 plugin : [
@@ -72,8 +73,11 @@
                                 // o 是高德地图定位插件实例
                                 o.getCurrentPosition ( ( status , result ) => {
                                     if ( result && result.position ) {
+                                        that.hSearchOption = {
+                                            city : result.addressComponent.province ,
+                                            citylimit : true
+                                        }
                                         that.center = [ result.position.lng , result.position.lat ];
-                                        that.$nextTick ();
                                     }
                                 } );
                             }
@@ -84,7 +88,6 @@
                     click ( e ) {
                         that.center = [ e.lnglat.lng , e.lnglat.lat ];
                         that.zoom = 18;
-                        that.$nextTick ();
                         // 这里通过高德 SDK 完成。
                         let geocoder = new AMap.Geocoder ( {
                             radius : 1000 ,
@@ -95,7 +98,6 @@
                                 if ( result && result.regeocode ) {
                                     that.address = result.regeocode.formattedAddress;
                                     that.$emit ( "mMapClick" , that.center , that.address )
-                                    that.$nextTick ();
                                 }
                             }
                         } );
@@ -104,7 +106,7 @@
                 } ,
                 address : "" ,
                 poisList : [] ,
-                cssText : "height: 40px;width: 80%;position: absolute;left: 0px;top: 0px;"
+                cssText : "height: 40px;width: 80%;position: absolute;left: 5px;top: 5px;"
             };
         } ,
         props : {
@@ -137,7 +139,7 @@
                 type : Object ,
                 default : () => {
                     return {
-                        city : '上海' ,
+                        city : '全国' ,
                         citylimit : true
                     };
                 }
@@ -172,20 +174,22 @@
             } ,
             mPosition : {
                 handler ( newValue , oldValue ) {
-                    this.$nextTick ();
                 } ,
                 immediate : true ,
                 deep : true
             } ,
             gPosition : {
                 handler ( newValue , oldValue ) {
-                    this.$nextTick ();
                 } ,
                 immediate : true ,
                 deep : true
             } ,
-            zoom ( newValue , oldValue ) {
-                this.$nextTick ();
+            mSearchOption : {
+                immediate : true ,
+                deep : true ,
+                handler ( newValue , oldValue ) {
+                    this.hSearchOption = this.$avoid ( newValue )
+                }
             } ,
             center : {
                 handler ( newValue , oldValue ) {
@@ -201,19 +205,20 @@
                 let that = this;
                 that.zoom = 18;
                 that.center = [ pois[ 0 ].lng , pois[ 0 ].lat ];
-                that.$nextTick ();
                 that.poisList = pois;
                 that.ResultHandle ( true );
             } ,
             ResultHandle ( type ) {
                 let that = this;
                 let spot = [];
-                that.poisList.forEach ( ( data , index ) => {
+                that.poisList.forEach ( ( data , index , list ) => {
                     let position = [ data.lng , data.lat ];
                     let title = data.name + ":" + data.address;
                     spot.push ( { position , title } );
-                    let n = GetDistance ( data.lng , data.lat , that.center[ 0 ] , that.center[ 1 ] );
-                    that.mSwitch ( parseInt ( n ) );
+                    if ( index == list.length - 1 ) {
+                        let n = GetDistance ( data.lng , data.lat , that.center[ 0 ] , that.center[ 1 ] );
+                        that.mSwitch ( parseInt ( n ) );
+                    }
                 } );
                 if ( type ) {
                     that.$emit ( "mSearchResult" , spot )

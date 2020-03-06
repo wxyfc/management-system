@@ -1,8 +1,8 @@
 <template>
     <fragment>
-        <Aplayer :showLrc="showLrc" :autoplay="autoplay" :mutex="mutex" :mini="mini" :float="float" :shuffle="shuffle" :listFolded="listFolded"
-                 :theme="theme" :preload="preload" :listMaxHeight="listMaxHeight" :repeat="repeat" :controls="controls" :muted="muted"
-                 :music="music" :list="list"></Aplayer>
+        <VueMusicPlayer :showLrc="showLrc" :autoplay="autoplay" :mutex="mutex" :mini="mini" :float="float" :shuffle="shuffle" :listFolded="listFolded"
+                        :theme="theme" :preload="preload" :listMaxHeight="listMaxHeight" :repeat="repeat" :controls="controls" :muted="muted"
+                        :music="music" :list="list"></VueMusicPlayer>
     </fragment>
 </template>
 
@@ -14,7 +14,7 @@
             return {};
         } ,
         components : {
-            Aplayer : () => import('vue-aplayer')
+            VueMusicPlayer : () => import('vue-aplayer')
         } ,
         props : {
             showLrc : {
@@ -87,7 +87,7 @@
                 type : Object ,
                 default : () => {
                     return {
-                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
+                        src : "http://47.94.89.73:8080/zeefile/audio/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
                         title : "世间美好与你环环相扣" ,//    音乐标题
                         artist : "柏松" ,//    艺术家
                         pic : "http://p1.music.126.net/DK1_4sP_339o5rowMdPXdw==/109951164071024476.jpg" ,//   封面图片
@@ -105,7 +105,3 @@
         } ,
     };
 </script>
-<style scoped>
-    .test {
-    }
-</style>

@@ -20,6 +20,7 @@
                         :DataConfig="DataConfig"
                         @clickPage="clickPage"
                         @select="selectTable"
+                        @clickButton="handleTableButton"
                 ></UiPageTable>
             </el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="8" class="margin1vw-t h100">
@@ -75,7 +76,12 @@
                     stripe : true ,
                     highlight : true ,
                     // single : true ,
-                    disabled : false
+                    disabled : false ,
+                    // button : {
+                    //     value : "state" ,
+                    //     display : "show" ,
+                    //     list : [ { text : ">" , type : "text" , value : [ 1 ] } ]
+                    // }
                 } ,
                 page : 1 ,
                 pageSize : 30 ,
@@ -110,6 +116,7 @@
                     width : "220" ,
                     prop : "expand" ,
                     align : "right" ,
+                    // label : this.language.tableExpandUsage ,
                     label : this.language.tableExpandUsage ,
                     type : this.addDataConfigItemType
                 }
@@ -124,6 +131,9 @@
             }
         } ,
         methods : {
+            handleTableButton ( row , bttext ) {
+                this.$log ( { row , bttext } );
+            } ,
             tableExpandUsageAddTableItemFun () {
                 let obj = this.$avoid ( this.addDataConfigFormItem );
                 this.$set ( this.addDataConfigForm , this.addDataConfigFormItem.prop , obj );
@@ -140,6 +150,7 @@
             } ,
             getRequest () {
                 this.post ( `/data/table` , {
+                    maxState : 1 ,
                     page : this.page ,
                     pageSize : this.pageSize ,
                     data : this.addRequestDataConfig

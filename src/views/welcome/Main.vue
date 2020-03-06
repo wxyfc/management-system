@@ -70,16 +70,16 @@
             RightClickMenuClose () {
                 this.RightClickMenuShow = false;
             } ,
-            beforeunloadFn ( e ) {
-                setLocal ( "userMemory" , {
-                    userInfo : this.userInfo ,
-                    otherInfo : this.otherInfo ,
-                    language : this.language
-                } );
-                let confirmationMessage = "user-yun";
-                ( e || window.event ).returnValue = confirmationMessage; // Gecko and Trident
-                return confirmationMessage;
-            } ,
+            // beforeunloadFn ( e ) {
+            //     setLocal ( "userMemory" , {
+            //         userInfo : this.userInfo ,
+            //         otherInfo : this.otherInfo ,
+            //         language : this.language
+            //     } );
+            //     let confirmationMessage = "user-yun";
+            //     ( e || window.event ).returnValue = confirmationMessage; // Gecko and Trident
+            //     return confirmationMessage;
+            // } ,
             rightClick ( e ) {
                 e.preventDefault ();
                 this.PrintingEle = e;
@@ -109,11 +109,11 @@
             // this.resizeHandler();
             // window.addEventListener("resize", this.resizeHandler);
             this.registerRight ( this.otherInfo.rightClickMenu );
-            window.addEventListener ( "beforeunload" , this.beforeunloadFn , true );
+            // window.addEventListener ( "beforeunload" , this.beforeunloadFn , true );
         } ,
         beforeDestroy () {
             // window.removeEventListener("resize", this.resizeHandler);
-            window.removeEventListener ( "beforeunload" , this.beforeunloadFn , true );
+            // window.removeEventListener ( "beforeunload" , this.beforeunloadFn , true );
         }
     };
 </script>

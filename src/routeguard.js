@@ -76,7 +76,7 @@ router.beforeEach ( ( to , from , next ) => {
             if ( isTrue ( userMemory ) ) { //是否本地有记忆 有
                 let second = userMemory.userInfo.lastTime.second;
                 let nowSecond = new Date ().getTime ();
-                let obsoleteTime = 0.001 * 60 * 60 * 1000 * 24; //用户登录时间判断拦截
+                let obsoleteTime = 1 * 60 * 60 * 1000 * 24; //用户登录时间判断拦截
                 if ( nowSecond - second < obsoleteTime ) {
                     store.dispatch ( "upVuex" , {
                         mutations : "setUserInfo" ,

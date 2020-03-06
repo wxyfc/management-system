@@ -1,5 +1,6 @@
 {
   "" : "" ,
+  "videoFrequency" : "视频" ,
   "listMaxHeight" : "列表最大高度" ,
   "playerMode" : "播放模式" ,
   "listFolded" : "列表折叠" ,

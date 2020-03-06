@@ -92,22 +92,22 @@
                 listMaxHeight : 100 ,
                 list : [
                     {
-                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E5%86%AC%E7%9C%A0.mp3" ,//    音乐源
+                        src : "http://47.94.89.73:8080/zeefile/audio/%E5%86%AC%E7%9C%A0.mp3" ,//    音乐源
                         title : "冬眠" ,//    音乐标题
                         artist : "司南" ,//    艺术家
                         pic : "http://p1.music.126.net/4KDBaQXnQywQovmqvjx-8Q==/109951164444131697.jpg" ,//   封面图片
                     } , {
-                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E5%A4%A7%E7%9C%A0.mp3" ,//    音乐源
+                        src : "http://47.94.89.73:8080/zeefile/audio/%E5%A4%A7%E7%9C%A0.mp3" ,//    音乐源
                         title : "大眠" ,//    音乐标题
                         artist : "小乐哥" ,//    艺术家
                         pic : "http://p2.music.126.net/zgDvTPDSYKjQUjkV8sQUOA==/109951164605092552.jpg" ,//   封面图片
                     } , {
-                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
+                        src : "http://47.94.89.73:8080/zeefile/audio/%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3.mp3" ,//    音乐源
                         title : "世间美好与你环环相扣" ,//    音乐标题
                         artist : "柏松" ,//    艺术家
                         pic : "http://p1.music.126.net/DK1_4sP_339o5rowMdPXdw==/109951164071024476.jpg" ,//   封面图片
                     } , {
-                        src : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/%E8%BF%99%E5%B0%B1%E6%98%AF%E7%88%B1%E5%90%97.mp3" ,//    音乐源
+                        src : "http://47.94.89.73:8080/zeefile/audio/%E8%BF%99%E5%B0%B1%E6%98%AF%E7%88%B1%E5%90%97.mp3" ,//    音乐源
                         title : "这就是爱吗" ,//    音乐标题
                         artist : "十豆彡" ,//    艺术家
                         pic : "http://p1.music.126.net/JgYOF-3unsM09TGhP5w6Ow==/109951164581280547.jpg" ,//   封面图片

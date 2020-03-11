@@ -34,6 +34,8 @@
                 default : false
             } ,
             WidthBasedHeight : {//WidthBasedHeight 基于宽度的高度
+
+            
                 type : Number ,
                 default : 47
             } ,

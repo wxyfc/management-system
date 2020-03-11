@@ -1,5 +1,5 @@
 <template>
-    <fragment>
+    <div v-if="handleChange">
         <videoPlayer class="h100 w100 video-js vjs-default-skin vjs-big-play-centered" ref="videoPlayer" :playsinline="true" :options="playerOptions"
                      @play="onPlayerPlay($event)" @pause="onPlayerPause($event)" @ended="onPlayerEnded($event)"
                      @loadeddata="onPlayerLoadeddata($event)" @waiting="onPlayerWaiting($event)"
@@ -7,7 +7,7 @@
                      @canplay="onPlayerCanplay($event)" @canplaythrough="onPlayerCanplaythrough($event)"
                      @ready="playerReadied($event)" @statechanged="playerStateChanged($event)"
         ></videoPlayer>
-    </fragment>
+    </div>
 </template>
 
 <script>
@@ -17,7 +17,10 @@
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "AVideoPlayer" ,
         data () {
-            return {};
+            return {
+                handleChange : true ,
+                handleTimeout : null
+            };
         } ,
         components : {
             videoPlayer
@@ -70,7 +73,7 @@
                 }
                 return {
                     playbackRates : this.playbackRates , //可选择的播放速度
-                    autoplay : this.autoplay , //如果true,浏览器准备好时开始回放。
+                    autoplay : this.autoplay , //如果true,浏览器准备好时开始播放。
                     muted : false , // 默认情况下将会消除任何音频。
                     loop : false , // 视频一结束就重新开始。
                     preload : 'auto' , // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
@@ -100,7 +103,33 @@
                 }
             }
         } ,
+        watch : {
+            handleChange : {
+                deep : true ,
+                // immediate : true ,
+                handler ( newv , oldv ) {
+                    this.handlerSetTimeout ();
+                }
+            }
+        } ,
         methods : {
+            handlerSetTimeout () {
+                let that = this;
+                that.handleChange = false;
+                that.handlerClear ();
+                if ( this.handleTimeout == null ) {
+                    this.handleTimeout = setTimeout ( () => {
+                        that.handleChange = true;
+                        console.log ( 11111 );
+                    } , 200 )
+                }
+            } ,
+            handlerClear () {
+                if ( this.handleTimeout != null ) {
+                    clearTimeout ( this.handleTimeout )
+                    this.handleTimeout = null;
+                }
+            } ,
             viodeIsPlayer ( b ) {
                 if ( b ) {
                     //开始播放

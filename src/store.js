@@ -36,7 +36,7 @@ export default new Vuex.Store ( {
             //     second : time.getTime ()
             // } );
         } ,
-        lastUserInfo ( state , value ) {
+        lastUserInfo ( state , value = {} ) {
             let time = new Date ();
             let date;
             if ( value.hasOwnProperty ( "date" ) ) {

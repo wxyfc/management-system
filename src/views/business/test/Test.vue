@@ -9,6 +9,8 @@
 </template>
 
 <script>
+    import { $random } from "@/function"
+
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,
         name : "test" ,
@@ -27,7 +29,7 @@
             } ,
             test () {
                 // window.location = encodeURI(this.location);
-            }
+            } ,
         } ,
         mounted () {
         }

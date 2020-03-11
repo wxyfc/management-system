@@ -342,23 +342,19 @@ export function setLocal ( key , val ) {
     //     }
     // } else {
     let allLoacl = getLocal ( "allLoacl" );
-    if ( allLoacl == null ) {
-        let nullObj = {};
-        nullObj[ key ] = val;
-        ls.setItem ( "allLoacl" , JSON.stringify ( nullObj ) )
-    }
-    else {
-        allLoacl[ key ] = val;
-        ls.setItem ( "allLoacl" , JSON.stringify ( allLoacl ) );
-    }
+    // if ( allLoacl == null ) {
+    //     let nullObj = {};
+    //     nullObj[ key ] = val;
+    //     ls.setItem ( "allLoacl" , JSON.stringify ( nullObj ) )
+    // } else {
+    allLoacl[ key ] = val;
+    ls.setItem ( "allLoacl" , JSON.stringify ( allLoacl ) );
+    // }
     // }
 }
 
 /*获取localStorage*/
-export function getLocal ( key , value ) {
-    if ( value == undefined ) {
-        value = {}
-    }
+export function getLocal ( key , value = {} ) {
     let ls = window.localStorage;
     try {
         let data = JSON.parse ( ls.getItem ( "allLoacl" ) );

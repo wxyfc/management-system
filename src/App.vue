@@ -7,6 +7,7 @@
     import { setLocal , clearLocal } from "@/function";
 
     export default {
+        mixins : [ require ( "@/mymixins" ).default ] ,
         name : "app" ,
         data () {
             return {

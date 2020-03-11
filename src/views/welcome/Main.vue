@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import { setLocal } from "@/function";
+    // import { setLocal } from "@/function";
 
     export default {
         mixins : [ require ( "@/mymixins" ).default ] ,

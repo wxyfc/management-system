@@ -336,6 +336,15 @@
         "intercept" : true ,
         "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
+    } , {
+      "path" : "/baiDuMap" ,
+      "name" : "baiDuMap" ,
+      "component" : "aboutmap/baidumap/BaiDuMap" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
     }
   ]
 } , {
@@ -373,6 +382,27 @@
       "path" : "/videoFrequency" ,
       "name" : "videoFrequency" ,
       "component" : "aboutvideo/videofrequency/VideoFrequency" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/aboutRichText" ,
+  "name" : "aboutRichText" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/uEditorWrap" ,
+      "name" : "uEditorWrap" ,
+      "component" : "richtext/ueditorwrap/UEditorWrap" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

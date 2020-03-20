@@ -39,7 +39,7 @@
     import VueAMap from "vue-amap";
 
     export default {
-        name : "MyMap" ,
+        name : "MyGAMap" ,
         components : {
             VueAMap : VueAMap.initAMapApiLoader ( {
                 // 高德key

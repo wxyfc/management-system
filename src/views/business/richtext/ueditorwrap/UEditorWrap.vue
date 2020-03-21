@@ -25,7 +25,6 @@
         methods : {
             richTextFun ( n ) {
                 this.richtext = n;
-                this.$log ( n );
             }
         } ,
         mounted () {

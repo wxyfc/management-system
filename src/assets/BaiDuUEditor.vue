@@ -9,8 +9,25 @@
         data () {
             return {
                 VueUeditorWrapMsg : '' ,
-                VueUeditorWrapConfig : {
-                    // 编辑器不自动被内容撑高
+
+            };
+        } ,
+        components : {
+            VueUeditorWrap : () => import('vue-ueditor-wrap')
+        } ,
+        props : {
+            input : {
+                type : [ String , Number ] ,
+            }
+        } ,
+        computed : {
+            VueUeditorWrapConfig () {
+                let UEDITOR_HOME_URL = "/UEditor/";
+                if ( process.env.NODE_ENV !== "development" ) {
+                    UEDITOR_HOME_URL = "/management-system/UEditor/"
+                }
+                return {
+                    // 编辑器是否自动被内容撑高
                     autoHeightEnabled : false ,
                     // 初始容器高度
                     initialFrameHeight : 666 ,
@@ -23,16 +40,8 @@
                     // 上传文件接口（这个地址是我为了方便各位体验文件上传功能搭建的临时接口，请勿在生产环境使用！！！）
                     serverUrl : 'http://35.201.165.105:8000/controller.php' ,
                     // UEditor 资源文件的存放路径，如果你使用的是 vue-cli 生成的项目，通常不需要设置该选项，vue-ueditor-wrap 会自动处理常见的情况，如果需要特殊配置，参考下方的常见问题2
-                    UEDITOR_HOME_URL : '/UEditor/'
+                    UEDITOR_HOME_URL
                 }
-            };
-        } ,
-        components : {
-            VueUeditorWrap : () => import('vue-ueditor-wrap')
-        } ,
-        props : {
-            input : {
-                type : [ String , Number ] ,
             }
         } ,
         watch : {
@@ -47,11 +56,22 @@
             addCustomButtom ( editorId ) {
                 window.UE.registerUI ( 'test-button' , ( editor , uiName ) => {
                     // 注册按钮执行时的 command 命令，使用命令默认就会带有回退操作
-                    editor.registerCommand ( uiName , {
-                        execCommand : () => {
-                            editor.execCommand ( 'inserthtml' , `<span>再飞高点就有魔法剑了</span>` )
+                    editor.registerCommand ( "buttonclick1" ,//注册事件名字，可以注册多个，要小写
+                        {
+                            execCommand : ( name , ...value ) => {
+                                // editor.execCommand ( 'inserthtml' , `<span>再飞高点就有魔法剑了</span>` )
+                                console.log ( name , ...value );
+                            }
                         }
-                    } );
+                    );
+                    editor.registerCommand ( "buttonclick2" ,//注册事件名字，可以注册多个，要小写
+                        {
+                            execCommand : ( name , ...value ) => {
+                                // editor.execCommand ( 'inserthtml' , `<span>再飞高点就有魔法剑了</span>` )
+                                console.log ( name , ...value );
+                            }
+                        }
+                    );
                     // 创建一个 button
                     let btn = new window.UE.ui.Button ( {
                         // 按钮的名字
@@ -63,7 +83,9 @@
                         // 点击时执行的命令
                         onclick : () => {
                             // 这里可以不用执行命令，做你自己的操作也可
-                            editor.execCommand ( uiName )
+                            editor.execCommand ( "buttonclick1" , '我是value1' , '我是value2' , '我是value3' );//提交事件名字,后面可以带值
+                            editor.execCommand ( "buttonclick2" , '我是value4' , '我是value5' , '我是value6' );//提交事件名字,后面可以带值
+                            editor.execCommand ( 'inserthtml' , `<span>再飞高点就有魔法剑了</span>` )
                         }
                     } );
                     // 当点到编辑内容上时，按钮要做的状态反射

@@ -120,7 +120,6 @@
                 if ( this.handleTimeout == null ) {
                     this.handleTimeout = setTimeout ( () => {
                         that.handleChange = true;
-                        console.log ( 11111 );
                     } , 200 )
                 }
             } ,

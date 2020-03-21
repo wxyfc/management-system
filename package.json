@@ -1,6 +1,6 @@
 {
-  "name" : "yun3" ,
-  "version" : "0.3.8" ,
+  "name" : "management-system" ,
+  "version" : "0.4.0" ,
   "private" : true ,
   "scripts" : {
     "serve" : "vue-cli-service serve" ,

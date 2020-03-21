@@ -41,6 +41,7 @@ module.exports = {
             "vue-amap" : "VueAMap" ,
             "vue-aplayer" : "VueAPlayer" ,
             "vue-video-player" : "VueVideoPlayer" ,
+            "vue-ueditor-wrap" : "VueUeditorWrap" ,
         }
     } ,
     css : {

@@ -1,14 +1,15 @@
 ﻿{
   "bgImg" : "登录页背景" ,
-  "bgImg" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/loginbg.jpg" ,
+  "bgImg" : "http://47.94.89.73:8080/zeefile/audio/photo/loginbg.jpg" ,
   
   
   "helloTitle" : "登录页标题" ,
   "helloTitle" : "adminTitle" ,
   "webIco" : "网站ico" ,
   "webIco" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/yun.ico" ,
+  "webIco" : "http://47.94.89.73:8080/zeefile/audio/photo/yun.ico" ,
   "menuLogo" : "菜单栏logo" ,
-  "menuLogo" : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/yun.ico" ,
+  "menuLogo" : "http://47.94.89.73:8080/zeefile/audio/photo/yun.ico" ,
   "themeBackgroundColor" : "主题背景颜色" ,
   "themeBackgroundColor" : "#304156" ,
   "themeTextColor" : "主题文字颜色" ,

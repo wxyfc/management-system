@@ -70,7 +70,6 @@
             picker () {
                 let nowDate = new Date ();
                 let dayNum = getNumberOfDays ( new Date ( this.day ) , new Date ( nowDate.$format ( this.valueF[ this.type ] ) ) );
-                this.$log ( dayNum );
                 this.$emit ( "change" , this.day , dayNum );//返回-1以上代表超出当前日期的数，1以上代表当前之前的天数，0或者-0则是当天；
             } ,
             handlerDate () {
@@ -84,7 +83,6 @@
                     let nowDate = new Date ();
                     let dayNum = getNumberOfDays ( date , new Date ( nowDate.$format ( this.valueF[ this.type ] ) ) );
                     this.day = date.$format ( this.valueF[ this.type ] );
-                    this.$log ( dayNum );
                     this.$emit ( "change" , this.day , dayNum );//返回-1以上代表超出当前日期的数，1以上代表当前之前的天数，0或者-0则是当天；
                 } else {
                     this.day = "";

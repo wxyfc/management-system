@@ -47,13 +47,13 @@
             return {
                 ico : "" ,
                 title : "" ,
-                icoT : [ { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/yun.ico" , title : "彩虹云" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/santa.ico" , title : "圣诞帽" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/christmas.ico" , title : "圣诞袜" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/love.ico" , title : "一颗小心心" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/superman.ico" , title : "超人" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/sword.ico" , title : "魔法剑" } ,
-                    { ico : "https://gitee.com/cloud_users/Cloud-management-system/raw/master/valentines.ico" , title : "跟你在一起的日子" } ]
+                icoT : [ { ico : "http://47.94.89.73:8080/zeefile/audio/photo/yun.ico" , title : "彩虹云" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/santa.ico" , title : "圣诞帽" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/christmas.ico" , title : "圣诞袜" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/love.ico" , title : "一颗小心心" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/superman.ico" , title : "超人" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/sword.ico" , title : "魔法剑" } ,
+                    { ico : "http://47.94.89.73:8080/zeefile/audio/photo/valentines.ico" , title : "跟你在一起的日子" } ]
             };
         } ,
         methods : {

@@ -1,5 +1,8 @@
 {
   "" : "" ,
+  "baiDuMap" : "百度地图" ,
+  "aboutRichText" : "关于富文本" ,
+  "uEditorWrap" : "百度UEditor" ,
   "mute" : "静音" ,
   "voice" : "声音" ,
   "play" : "播放" ,

@@ -1,5 +1,7 @@
 {
   "" : "" ,
+  "tinymce" : "tinymce" ,
+  "tinymceDemo" : "tinymce" ,
   "baiDuMap" : "百度地图" ,
   "aboutRichText" : "关于富文本" ,
   "uEditorWrap" : "百度UEditor" ,

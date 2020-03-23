@@ -438,3 +438,7 @@ textarea.el-textarea__inner {
     left: 50%;
     transform: translate(-50%, 0);
 }
+.el-input--mini .el-input__inner {
+    height: 50px;
+    line-height: 28px;
+  }

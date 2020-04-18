@@ -400,18 +400,39 @@
   } ,
   "children" : [
     {
-      "path" : "/uEditorWrap" ,
-      "name" : "uEditorWrap" ,
-      "component" : "richtext/ueditorwrap/UEditorWrap" ,
+      "path" : "/tinymce" ,
+      "name" : "tinymce" ,
+      "component" : "richtext/tinymce/Tinymce" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,
         "role" : [ 5233 , 5232 , 5231 , 5230 ]
       }
     } , {
-      "path" : "/tinymce" ,
-      "name" : "tinymce" ,
-      "component" : "richtext/tinymce/Tinymce" ,
+      "path" : "/tiptap" ,
+      "name" : "tiptap" ,
+      "component" : "richtext/elementtiptap/ElementTiptap" ,
+      "meta" : {
+        "icon" : "el-icon-sugar" ,
+        "intercept" : true ,
+        "role" : [ 5233 , 5232 , 5231 , 5230 ]
+      }
+    }
+  ]
+} , {
+  "path" : "/element" ,
+  "name" : "element" ,
+  "component" : "welcome/Main" ,
+  "meta" : {
+    "icon" : "el-icon-sugar" ,
+    "intercept" : true ,
+    "role" : [ 5233 , 5232 , 5231 , 5230 ]
+  } ,
+  "children" : [
+    {
+      "path" : "/eleDialog" ,
+      "name" : "eleDialog" ,
+      "component" : "element/eledialog/EleDialog" ,
       "meta" : {
         "icon" : "el-icon-sugar" ,
         "intercept" : true ,

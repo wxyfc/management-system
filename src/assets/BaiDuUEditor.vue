@@ -1,5 +1,5 @@
 <template>
-    <VueUeditorWrap v-model="VueUeditorWrapMsg" :config="VueUeditorWrapConfig" @ready="ready" :destroy="true"></VueUeditorWrap>
+    <!--<VueUeditorWrap v-model="VueUeditorWrapMsg" :config="VueUeditorWrapConfig" @ready="ready" :destroy="true"></VueUeditorWrap>-->
 </template>
 
 <script>
@@ -13,7 +13,7 @@
             };
         } ,
         components : {
-            VueUeditorWrap : () => import('vue-ueditor-wrap')
+            // VueUeditorWrap : () => import('vue-ueditor-wrap')
         } ,
         props : {
             input : {

@@ -16,5 +16,14 @@ let colors = [
     "#b0ca71",
     "#ffec47",
 ]
-
+// {
+//     "path" : "/uEditorWrap" ,
+//     "name" : "uEditorWrap" ,
+//     "component" : "richtext/ueditorwrap/UEditorWrap" ,
+//     "meta" : {
+//     "icon" : "el-icon-sugar" ,
+//         "intercept" : true ,
+//         "role" : [ 5233 , 5232 , 5231 , 5230 ]
+// }
+// } ,
 module.exports = colors;

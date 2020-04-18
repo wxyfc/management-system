@@ -1,5 +1,9 @@
 {
   "" : "" ,
+  "element" : "常用组件" ,
+  "eleDialog" : "element-dialog" ,
+  "elementTiptapDemo" : "tiptap" ,
+  "tiptap" : "tiptap" ,
   "tinymce" : "tinymce" ,
   "tinymceDemo" : "tinymce" ,
   "baiDuMap" : "百度地图" ,

@@ -2,7 +2,7 @@
     <el-row>
         <mt>{{language[$options.name]}}</mt>
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="height: 96%;" class="padding1vw">
-            <BaiDuUEditor :input="richtext" @input="richTextFun"></BaiDuUEditor>
+            <!--<BaiDuUEditor :input="richtext" @input="richTextFun"></BaiDuUEditor>-->
         </el-col>
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="height: 96%;" class="padding1vw">
             <div v-html="richtext" class="overflowauto h100"></div>
@@ -20,7 +20,7 @@
             };
         } ,
         components : {
-            BaiDuUEditor : () => import('@/assets/BaiDuUEditor')
+            // BaiDuUEditor : () => import('@/assets/BaiDuUEditor')
         } ,
         methods : {
             richTextFun ( n ) {

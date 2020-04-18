@@ -1,6 +1,8 @@
 {
   "" : "" ,
-  "tile" : "Power Bee Intelligent Park Management System" ,
+  "element" : "常用组件" ,
+  "eleDialog" : "element-dialog" ,
+  "title" : "Power Bee Intelligent Park Management System" ,
   "getInto" : "Get into" ,
   "personal" : "personal" ,
   "core" : "core" ,
@@ -334,6 +336,7 @@
   "waitAuthSign" : "Waiting for authorization contract" ,
   "continueAuthSign" : "Continued authorization contract" ,
   "continueAuthSignTooltip" : "Continued authorization signing can only be used when the merchant's review status is waiting for authorization signing. It provides the second step authorized signing of secondary merchants function for secondary merchants to continue to apply for account opening" ,
+  
   
   "okAuthSign" : "Authorized contract" ,
   "waitBankAudit" : "Waiting for bank audit" ,

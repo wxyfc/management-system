@@ -4,10 +4,10 @@
         <el-col :xs="24" :sm="18" :md="12" :lg="10" :xl="8" style="height: 80%;" class="padding1vw">
             <mdb @click="isShow=true">ShowDialog</mdb>
         </el-col>
-        <ElementDialog v-model="isShow" title="标题1">
-            <div slot="title">标题2</div>
-            <div>1111111111111111111111111111111112222</div>
-            <!--<div slot="footer">脚步</div>-->
+        <ElementDialog v-model="isShow" title="title" :sure="sureConfig" :cancel="cancelConfig">
+            <!--<div slot="title">title</div>-->
+            <div>{{new Date() | dataFormat}}</div>
+            <!--<div slot="footer">footer</div>-->
         </ElementDialog>
     </el-row>
 </template>
@@ -18,40 +18,34 @@
         name : "eleDialog" ,
         data () {
             return {
-                isShow : true
+                isShow : true ,
             };
         } ,
         components : {
             ElementDialog : () => import('@/assets/ElementDialog')
         } ,
-        props : {
-            // test: {
-            //   type: String,
-            //   default: () => {
-            //     let colors = require("@/web-config/color.js");
-            //     return colors[Math.ceil(Math.random() * colors.length - 1)];
-            //   }
-            // }
-        } ,
         computed : {
-            // test() {
-            //   let data = null;
-            //   return data;
-            // }
+            sureConfig () {
+                return {
+                    text : 111 ,
+                    function : this.sure
+                };
+            } ,
+            cancelConfig () {
+                return {
+                    text : 222 ,
+                    function : this.cancel
+                };
+            } ,
         } ,
-        watch : {
-            //监听数据变化
-            // test: {
-            //   deep: true,
-            //   immediate: true,
-            //   handler(newv, oldv) {
-            // this.$nextTick();
-            // this.$forceUpdate();
-            // }
-            // }
+        methods : {
+            sure () {
+                console.log ( 111 )
+            } ,
+            cancel () {
+                console.log ( 222 )
+            } ,
         } ,
-        methods : {} ,
-
         mounted () {
         }
     };

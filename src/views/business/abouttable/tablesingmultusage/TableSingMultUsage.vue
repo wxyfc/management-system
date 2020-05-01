@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <mt>{{language[$options.name]}}</mt>
-        <el-row class="padding1vw alnrit" style="height:5%;">
+        <el-row class="padding1vw alnrit" style="height:15%;">
             <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="16" class="margin1vw-t">
                 {{ language.tableSingMultUsage }}：
                 <el-radio-group v-model="tableSingMultUsageMode">

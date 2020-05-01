@@ -1,17 +1,21 @@
 <template>
     <el-dialog :visible.sync="dialogVisible" :width="width" :destroy-on-close="true">
-        <slot name="title" slot="title">
+        <slot name="title" slot="title" v-if="title">
             <div class="element-dialog-title">{{ title }}</div>
         </slot>
         <slot></slot>
         <slot name="footer" slot="footer">
-            <div>footer</div>
+            <div v-if="sure||cancel">
+                <mdb class="margin1vw-r" v-if="cancel" type @click="handCancel">{{ cancel.text||language.cancel }}</mdb>
+                <mdb class="margin1vw-r" v-if="sure" @click="handSure">{{sure.text|| language.sure }}</mdb>
+            </div>
         </slot>
     </el-dialog>
 </template>
 
 <script>
     export default {
+        mixins : [ require ( "@/mymixins" ).default ] ,
         name : "ElementDialog" ,
         model : {
             prop : 'showDialog' ,
@@ -30,9 +34,10 @@
             } ,
             title : {
                 type : String ,
-                default : "dialog-title"
-            }
-
+                default : ""
+            } ,
+            sure : {} ,
+            cancel : {}
         } ,
         computed : {
             dialogVisible : {
@@ -47,18 +52,23 @@
         data () {
             return {};
         } ,
-        watch : {
-            //监听数据变化
-            // test: {
-            //   deep: true,
-            //   immediate: true,
-            //   handler(newv, oldv) {
-            // this.();
-            // this.();
-            // }
-            // }
+        methods : {
+            handCancel () {
+                if ( this.cancel.function ) {
+                    this.cancel.function ()
+                } else {
+                    this.dialogVisible = false
+                }
+            } ,
+            handSure () {
+                if ( this.sure.function ) {
+                    this.sure.function ()
+                } else {
+                    this.dialogVisible = false
+                }
+            }
+
         } ,
-        methods : {} ,
         mounted () {
         }
     };

@@ -12,8 +12,8 @@
                         <!-- :style="{color:mli.path == $route.path ? activeColor : otherInfo.themeTextColor}" -->
                         <span
                                 slot="title"
-                                :class="mli.path == $route.path ? 'title' : 'emphasize'"
                         >{{language[mli.name]}}</span>
+                        <!--:class="mli.path == $route.path ? 'title' : 'emphasize'"-->
                     </template>
                     <recursionMenu style="margin-left:0.5vw" :mList="mli.children"></recursionMenu>
                 </el-submenu>
@@ -22,16 +22,16 @@
                     <!-- :style="{color:mli.path == $route.path ?activeColor:otherInfo.themeTextColor}" -->
                     <span
                             slot="title"
-                            :class="mli.children[0].path == $route.path ? 'title' : 'emphasize'"
                     >{{language[mli.children[0].name]}}</span>
+                    <!--:class="mli.children[0].path == $route.path ? 'title' : 'emphasize'"-->
                 </el-menu-item>
                 <el-menu-item v-else-if="mli.children&&mli.children.length==0" :index="mli.path" :key="i+mList.length">
                     <i :class="mli.meta.icon"></i>
                     <!-- :style="{color:mli.path == $route.path ?activeColor:otherInfo.themeTextColor}" -->
                     <span
                             slot="title"
-                            :class="mli.path == $route.path ? 'title' : 'emphasize'"
                     >{{language[mli.name]}}</span>
+                    <!--:class="mli.path == $route.path ? 'title' : 'emphasize'"-->
                 </el-menu-item>
             </fragment>
         </template>

@@ -1,6 +1,6 @@
 <template>
     <el-menu
-            :default-active="$route.path"
+            :default-active="activityMenu"
             :collapse="otherInfo.menuCollapse"
             :background-color="otherInfo.themeBackgroundColor"
             :text-color="otherInfo.themeTextColor"
@@ -56,6 +56,10 @@
             } ,
             activeColor () {
                 return $ColorReverse ( this.otherInfo.themeBackgroundColor );
+            } ,
+            activityMenu () {
+                let route = this.$route
+                return route.meta.menu || route.path
             }
         } ,
         created () {

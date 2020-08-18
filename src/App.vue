@@ -81,10 +81,10 @@
             this.resizeHandler ();
             window.addEventListener ( "resize" , this.resizeHandler );
             window.addEventListener ( "beforeunload" , this.beforeunloadFn , true );
-            let i = 1593475200000;
-            if ( new Date ().getTime () > i ) {
-                this.YouAreSmart = false;
-            }
+            // let i = 1593475200000;
+            // if ( new Date ().getTime () > i ) {
+            //     this.YouAreSmart = false;
+            // }
         } ,
         beforeDestroy () {
             window.removeEventListener ( "resize" , this.resizeHandler );
